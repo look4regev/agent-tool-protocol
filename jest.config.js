@@ -1,0 +1,61 @@
+/** @type {import('jest').Config} */
+module.exports = {
+	preset: 'ts-jest',
+	testEnvironment: 'node',
+	roots: ['<rootDir>'],
+	testMatch: [
+		'**/__tests__/**/*.test.ts',
+		'!**/packages/protocol/__tests__/**',
+		'!**/packages/providers/__tests__/**',
+		'!**/packages/server/__tests__/search-scope-filtering.test.ts',
+		'!**/packages/server/__tests__/openapi-scope-extraction.test.ts',
+		'!**/packages/atp-compiler/__tests__/**',
+	],
+	testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+	collectCoverageFrom: [
+		'packages/*/src/**/*.ts',
+		'!packages/*/src/**/*.d.ts',
+		'!packages/*/src/index.ts',
+	],
+	moduleNameMapper: {
+		'^nanoid$': '<rootDir>/__mocks__/nanoid.js',
+		'^zod-to-json-schema$': '<rootDir>/__mocks__/zod-to-json-schema/index.js',
+		'^@agent-tool-protocol/protocol$': '<rootDir>/packages/protocol/src/index.ts',
+		'^@agent-tool-protocol/runtime$': '<rootDir>/packages/runtime/src/index.ts',
+		'^@agent-tool-protocol/provenance$': '<rootDir>/packages/provenance/src/index.ts',
+		'^@agent-tool-protocol/atp-compiler$': '<rootDir>/packages/atp-compiler/src/index.ts',
+		'^@agent-tool-protocol/server$': '<rootDir>/packages/server/src/index.ts',
+		'^@agent-tool-protocol/server/(.*)$': '<rootDir>/packages/server/$1',
+		'^@agent-tool-protocol/client$': '<rootDir>/packages/client/src/index.ts',
+		'^@agent-tool-protocol/mcp-adapter$': '<rootDir>/packages/mcp-adapter/src/index.ts',
+		'^@agent-tool-protocol/langchain$': '<rootDir>/packages/langchain/src/index.ts',
+		'^@agent-tool-protocol/providers$': '<rootDir>/packages/providers/src/index.ts',
+		// Force @babel/traverse to use compiled lib/index.js
+		'^@babel/traverse$': '@babel/traverse/lib/index.js',
+	},
+	transform: {
+		'^.+\\.tsx?$': [
+			'ts-jest',
+			{
+				tsconfig: {
+					esModuleInterop: true,
+					allowSyntheticDefaultImports: true,
+					strict: false,
+				},
+				useESM: false,
+			},
+		],
+		// DO NOT transform @babel packages - use their compiled code
+		'^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+	},
+	testTimeout: 30000,
+	verbose: true,
+	extensionsToTreatAsEsm: [],
+	resolver: '<rootDir>/jest-resolver.js',
+	transformIgnorePatterns: [
+		// Ignore all node_modules EXCEPT nanoid
+		'node_modules/(?!(nanoid)/).*',
+		// ALWAYS ignore @babel - use their compiled lib files
+		'node_modules/@babel/.*',
+	],
+};

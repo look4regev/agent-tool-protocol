@@ -1,0 +1,16 @@
+{
+	"name": "quickstart-example",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"start": "NODE_OPTIONS='--no-node-snapshot' tsx index.ts"
+	},
+	"dependencies": {
+		"@agent-tool-protocol/server": "*",
+		"@agent-tool-protocol/client": "*",
+		"@agent-tool-protocol/mcp-adapter": "*",
+		"tsx": "^4.19.2"
+	}
+}
+

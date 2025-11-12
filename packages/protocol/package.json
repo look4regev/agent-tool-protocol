@@ -1,0 +1,41 @@
+{
+	"name": "@agent-tool-protocol/protocol",
+	"version": "1.0.0",
+	"description": "Core protocol types and interfaces for Agent Tool Protocol",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json --watch",
+		"clean": "rm -rf dist *.tsbuildinfo",
+		"test": "vitest run",
+		"lint": "tsc --noEmit"
+	},
+	"keywords": [
+		"agent",
+		"protocol",
+		"types",
+		"ai",
+		"llm"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"@agent-tool-protocol/provenance": "workspace:*",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.1"
+	}
+}

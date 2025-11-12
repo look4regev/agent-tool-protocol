@@ -1,0 +1,19 @@
+{
+	"name": "atp-client-tools-example",
+	"version": "1.0.0",
+	"description": "Example of client-provided tools in Agent Tool Protocol",
+	"type": "module",
+	"scripts": {
+		"server": "tsx server.ts",
+		"client": "tsx client.ts"
+	},
+	"dependencies": {
+		"@agent-tool-protocol/client": "workspace:*",
+		"@agent-tool-protocol/protocol": "workspace:*",
+		"@agent-tool-protocol/server": "workspace:*"
+	},
+	"devDependencies": {
+		"tsx": "^4.7.0",
+		"typescript": "^5.3.3"
+	}
+}

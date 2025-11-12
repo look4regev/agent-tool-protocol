@@ -1,0 +1,168 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Stripe Mock API",
+		"version": "1.0.0",
+		"description": "Mock Stripe API for testing API Key authentication"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:STRIPE_PORT"
+		}
+	],
+	"security": [
+		{
+			"bearerAuth": []
+		}
+	],
+	"components": {
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "API Key"
+			}
+		},
+		"schemas": {
+			"Customer": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "string" },
+					"email": { "type": "string" },
+					"name": { "type": "string" },
+					"created": { "type": "integer" }
+				}
+			},
+			"Charge": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "string" },
+					"amount": { "type": "integer" },
+					"currency": { "type": "string" },
+					"customer": { "type": "string" },
+					"status": { "type": "string" },
+					"created": { "type": "integer" }
+				}
+			},
+			"CustomerList": {
+				"type": "object",
+				"properties": {
+					"object": { "type": "string", "enum": ["list"] },
+					"data": {
+						"type": "array",
+						"items": { "$ref": "#/components/schemas/Customer" }
+					},
+					"has_more": { "type": "boolean" }
+				}
+			},
+			"ChargeList": {
+				"type": "object",
+				"properties": {
+					"object": { "type": "string", "enum": ["list"] },
+					"data": {
+						"type": "array",
+						"items": { "$ref": "#/components/schemas/Charge" }
+					},
+					"has_more": { "type": "boolean" }
+				}
+			}
+		}
+	},
+	"paths": {
+		"/v1/customers": {
+			"get": {
+				"operationId": "listCustomers",
+				"summary": "List customers",
+				"x-sensitive": false,
+				"responses": {
+					"200": {
+						"description": "List of customers",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/CustomerList" }
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"operationId": "createCustomer",
+				"summary": "Create a customer",
+				"x-sensitive": false,
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/x-www-form-urlencoded": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"email": { "type": "string" },
+									"name": { "type": "string" }
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Customer created",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/Customer" }
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/charges": {
+			"get": {
+				"operationId": "listCharges",
+				"summary": "List charges",
+				"x-sensitive": true,
+				"responses": {
+					"200": {
+						"description": "List of charges",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/ChargeList" }
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"operationId": "createCharge",
+				"summary": "Create a charge",
+				"x-sensitive": true,
+				"x-requires-approval": true,
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/x-www-form-urlencoded": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"amount": { "type": "integer" },
+									"currency": { "type": "string" },
+									"customer": { "type": "string" }
+								},
+								"required": ["amount", "currency"]
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Charge created",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/Charge" }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"name": "@agent-tool-protocol/providers",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/providers/src",
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "nx:run-commands",
+			"outputs": ["{workspaceRoot}/packages/providers/dist"],
+			"options": {
+				"command": "tsc --build packages/providers/tsconfig.json",
+				"cwd": "{workspaceRoot}"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "rm -rf packages/providers/dist"
+			}
+		},
+		"lint": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "cd packages/providers && npm run lint"
+			}
+		}
+	},
+	"tags": []
+}

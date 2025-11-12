@@ -1,0 +1,45 @@
+{
+	"name": "@agent-tool-protocol/langchain",
+	"version": "1.0.0",
+	"description": "LangChain integration for Agent Tool Protocol",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json --watch",
+		"clean": "rm -rf dist *.tsbuildinfo",
+		"test": "vitest run",
+		"lint": "tsc --noEmit"
+	},
+	"keywords": [
+		"agent",
+		"protocol",
+		"langchain",
+		"ai",
+		"llm"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"@agent-tool-protocol/client": "workspace:*",
+		"@agent-tool-protocol/protocol": "workspace:*",
+		"@langchain/core": "^0.3.78",
+		"json-schema-to-zod": "^2.6.1",
+		"langchain": "^0.3.35",
+		"zod": "^4.1.11"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.1"
+	}
+}

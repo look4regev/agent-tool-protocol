@@ -1,0 +1,121 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Protected API",
+		"version": "1.0.0",
+		"description": "Mock API for testing Bearer token authentication"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:PROTECTED_API_PORT"
+		}
+	],
+	"security": [
+		{
+			"bearerAuth": []
+		}
+	],
+	"components": {
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer"
+			}
+		},
+		"schemas": {
+			"ProtectedResource": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "string" },
+					"data": { "type": "string" },
+					"timestamp": { "type": "integer" }
+				}
+			},
+			"ActionResult": {
+				"type": "object",
+				"properties": {
+					"success": { "type": "boolean" },
+					"action": { "type": "string" },
+					"timestamp": { "type": "integer" }
+				}
+			}
+		}
+	},
+	"paths": {
+		"/protected/resource": {
+			"get": {
+				"operationId": "getProtectedResource",
+				"summary": "Get protected resource",
+				"x-sensitive": false,
+				"parameters": [
+					{
+						"name": "id",
+						"in": "query",
+						"required": false,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Protected resource data",
+						"content": {
+							"application/json": {
+								"schema": {
+									"oneOf": [
+										{ "$ref": "#/components/schemas/ProtectedResource" },
+										{
+											"type": "object",
+											"properties": {
+												"resources": {
+													"type": "array",
+													"items": { "$ref": "#/components/schemas/ProtectedResource" }
+												}
+											}
+										}
+									]
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Authentication required"
+					}
+				}
+			}
+		},
+		"/protected/action": {
+			"post": {
+				"operationId": "performProtectedAction",
+				"summary": "Perform protected action",
+				"x-sensitive": false,
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"action": { "type": "string" }
+								},
+								"required": ["action"]
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Action performed",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/ActionResult" }
+							}
+						}
+					},
+					"401": {
+						"description": "Authentication required"
+					}
+				}
+			}
+		}
+	}
+}
