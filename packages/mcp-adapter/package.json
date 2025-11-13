@@ -1,6 +1,6 @@
 {
 	"name": "@agent-tool-protocol/mcp-adapter",
-	"version": "1.0.0",
+	"version": "0.17.12",
 	"description": "MCP compatibility adapter for Agent Tool Protocol",
 	"type": "module",
 	"main": "./dist/index.js",
