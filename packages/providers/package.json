@@ -1,6 +1,6 @@
 {
 	"name": "@mondaydotcomorg/atp-providers",
-	"version": "0.17.14",
+	"version": "0.17.15",
 	"description": "Built-in providers for Agent Tool Protocol (cache, auth, audit)",
 	"type": "module",
 	"main": "./dist/index.js",
@@ -18,7 +18,7 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@mondaydotcomorg/atp-protocol": "0.17.14"
+		"@mondaydotcomorg/atp-protocol": "0.17.15"
 	},
 	"devDependencies": {
 		"typescript": "^5.7.2"
