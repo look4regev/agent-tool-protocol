@@ -25,34 +25,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@agent-tool-protocol/runtime@workspace:*, @agent-tool-protocol/runtime@workspace:packages/runtime":
-  version: 0.0.0-use.local
-  resolution: "@agent-tool-protocol/runtime@workspace:packages/runtime"
-  dependencies:
-    "@types/node": "npm:^20.11.5"
-    node-cache: "npm:*"
-    pino: "npm:*"
-    pino-pretty: "npm:*"
-    reflect-metadata: "npm:^0.2.1"
-    ts-json-schema-generator: "npm:^2.4.0"
-    ts-morph: "npm:^21.0.1"
-    tsx: "npm:^4.7.0"
-    typescript: "npm:^5.3.3"
-    undici: "npm:*"
-    vitest: "npm:^1.2.1"
-  peerDependencies:
-    ioredis: ^5.8.0
-  peerDependenciesMeta:
-    ioredis:
-      optional: true
-  languageName: unknown
-  linkType: soft
-
 "@agent-tool-protocol/server@npm:*, @agent-tool-protocol/server@workspace:*, @agent-tool-protocol/server@workspace:packages/server":
   version: 0.0.0-use.local
   resolution: "@agent-tool-protocol/server@workspace:packages/server"
   dependencies:
-    "@agent-tool-protocol/runtime": "workspace:*"
     "@babel/generator": "npm:^7.26.0"
     "@babel/parser": "npm:^7.26.0"
     "@babel/traverse": "npm:^7.26.0"
@@ -60,6 +36,7 @@ __metadata:
     "@mondaydotcomorg/atp-compiler": "workspace:*"
     "@mondaydotcomorg/atp-protocol": "workspace:*"
     "@mondaydotcomorg/atp-provenance": "workspace:*"
+    "@mondaydotcomorg/atp-runtime": "workspace:*"
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/auto-instrumentations-node": "npm:^0.66.0"
     "@opentelemetry/core": "npm:^2.2.0"
@@ -3655,8 +3632,8 @@ __metadata:
     nanoid: "npm:^5.0.0"
     typescript: "npm:^5.3.0"
   peerDependencies:
-    "@agent-tool-protocol/runtime": "workspace:*"
     "@mondaydotcomorg/atp-protocol": "workspace:*"
+    "@mondaydotcomorg/atp-runtime": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -3719,6 +3696,29 @@ __metadata:
   dependencies:
     "@mondaydotcomorg/atp-protocol": "workspace:*"
     typescript: "npm:^5.7.2"
+  languageName: unknown
+  linkType: soft
+
+"@mondaydotcomorg/atp-runtime@workspace:*, @mondaydotcomorg/atp-runtime@workspace:packages/runtime":
+  version: 0.0.0-use.local
+  resolution: "@mondaydotcomorg/atp-runtime@workspace:packages/runtime"
+  dependencies:
+    "@types/node": "npm:^20.11.5"
+    node-cache: "npm:*"
+    pino: "npm:*"
+    pino-pretty: "npm:*"
+    reflect-metadata: "npm:^0.2.1"
+    ts-json-schema-generator: "npm:^2.4.0"
+    ts-morph: "npm:^21.0.1"
+    tsx: "npm:^4.7.0"
+    typescript: "npm:^5.3.3"
+    undici: "npm:*"
+    vitest: "npm:^1.2.1"
+  peerDependencies:
+    ioredis: ^5.8.0
+  peerDependenciesMeta:
+    ioredis:
+      optional: true
   languageName: unknown
   linkType: soft
 
