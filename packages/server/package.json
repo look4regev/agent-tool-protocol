@@ -23,6 +23,11 @@
 		"test": "vitest run",
 		"lint": "tsc --noEmit"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/your-org/agent-tool-protocol.git",
+		"directory": "packages/server"
+	},
 	"keywords": [
 		"agent",
 		"protocol",

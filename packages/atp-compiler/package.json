@@ -18,6 +18,11 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/your-org/agent-tool-protocol.git",
+		"directory": "packages/atp-compiler"
+	},
 	"scripts": {
 		"build": "tsc",
 		"test": "jest",
