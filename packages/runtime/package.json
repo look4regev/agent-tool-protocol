@@ -19,7 +19,9 @@
 		"access": "public"
 	},
 	"repository": {
-		"url": "https://github.com/mondaycom/agent-tool-protocol"
+		"type": "git",
+		"url": "https://github.com/mondaycom/agent-tool-protocol",
+		"directory": "packages/runtime"
 	},
 	"scripts": {
 		"build": "npm run generate:metadata && tsc -p tsconfig.json",
