@@ -27,7 +27,7 @@
 		"format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
 		"graph": "nx graph",
 		"prepare": "husky",
-		"prepare:release": "nx release --first-release --skip-publish"
+		"prepare:release": "nx release --skip-publish"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^20.1.0",
