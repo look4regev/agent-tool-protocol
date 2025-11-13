@@ -29,6 +29,11 @@
 		"ai",
 		"llm"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/your-org/agent-tool-protocol.git",
+		"directory": "packages/protocol"
+	},
 	"license": "MIT",
 	"dependencies": {
 		"@mondaydotcomorg/atp-provenance": "0.17.16",

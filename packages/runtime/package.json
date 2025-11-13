@@ -18,6 +18,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"repository": {
+		"url": "https://github.com/mondaycom/agent-tool-protocol"
+	},
 	"scripts": {
 		"build": "npm run generate:metadata && tsc -p tsconfig.json",
 		"generate:metadata": "tsx scripts/generate-metadata.ts",

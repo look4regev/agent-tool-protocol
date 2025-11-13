@@ -17,6 +17,11 @@
 		"lint": "tsc --noEmit",
 		"test": "vitest run"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/your-org/agent-tool-protocol.git",
+		"directory": "packages/providers"
+	},
 	"publishConfig": {
 		"access": "public"
 	},

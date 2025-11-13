@@ -15,6 +15,11 @@
 		"dist",
 		"src"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/your-org/agent-tool-protocol.git",
+		"directory": "packages/langchain"
+	},
 	"publishConfig": {
 		"access": "public"
 	},
