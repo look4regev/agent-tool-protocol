@@ -283,7 +283,7 @@ if (cacheProvider) {
 
 ```typescript
 import { ATPCompiler, initializeRuntime } from '@mondaydotcomorg/atp-compiler';
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis();

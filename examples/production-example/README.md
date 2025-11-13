@@ -62,7 +62,7 @@ import {
 	RedisCache,
 	PostgresAuditSink,
 	AWSSecretsAuthProvider,
-} from '@agent-tool-protocol/providers';
+} from '@mondaydotcomorg/atp-providers';
 
 server.setCache(new RedisCache({ url: process.env.REDIS_URL }));
 server.setAudit(new PostgresAuditSink({ connectionString: process.env.DATABASE_URL }));

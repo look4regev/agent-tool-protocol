@@ -9,7 +9,7 @@
  */
 
 import { createServer } from '@agent-tool-protocol/server';
-import { ScopeCheckerRegistry } from '@agent-tool-protocol/providers';
+import { ScopeCheckerRegistry } from '@mondaydotcomorg/atp-providers';
 import type { AuthProvider, UserCredentialData } from '@mondaydotcomorg/atp-protocol';
 import express, { Request, Response, NextFunction } from 'express';
 import { randomBytes } from 'node:crypto';

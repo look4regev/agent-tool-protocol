@@ -4,7 +4,7 @@
  */
 
 import { createServer } from '@agent-tool-protocol/server';
-import { MemoryCache } from '@agent-tool-protocol/providers';
+import { MemoryCache } from '@mondaydotcomorg/atp-providers';
 
 describe('Client Initialization', () => {
 	let server: any;

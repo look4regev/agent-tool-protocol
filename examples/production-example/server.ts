@@ -4,7 +4,7 @@
  */
 
 import { createServer, loadOpenAPI, MB, HOUR, MINUTE } from '@agent-tool-protocol/server';
-import { MemoryCache, JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { MemoryCache, JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 import type { Middleware } from '@agent-tool-protocol/server';
 
 const server = createServer({

@@ -37,7 +37,7 @@ import {
 	EnvAuthProvider,
 	MemoryCache,
 	OpenTelemetryAuditSink,
-} from '@agent-tool-protocol/providers';
+} from '@mondaydotcomorg/atp-providers';
 
 export class AgentToolProtocolServer {
 	private config: ResolvedServerConfig;

@@ -29,7 +29,7 @@ module.exports = {
 		'^@mondaydotcomorg/atp-client$': '<rootDir>/packages/client/src/index.ts',
 		'^@mondaydotcomorg/atp-mcp-adapter$': '<rootDir>/packages/mcp-adapter/src/index.ts',
 		'^@mondaydotcomorg/atp-langchain$': '<rootDir>/packages/langchain/src/index.ts',
-		'^@agent-tool-protocol/providers$': '<rootDir>/packages/providers/src/index.ts',
+		'^@mondaydotcomorg/atp-providers$': '<rootDir>/packages/providers/src/index.ts',
 		// Force @babel/traverse to use compiled lib/index.js
 		'^@babel/traverse$': '@babel/traverse/lib/index.js',
 	},

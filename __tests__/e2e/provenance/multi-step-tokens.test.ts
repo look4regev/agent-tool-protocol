@@ -6,7 +6,7 @@
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { createServer, ProvenanceMode, createCustomPolicy } from '@agent-tool-protocol/server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
-import { MemoryCache } from '@agent-tool-protocol/providers';
+import { MemoryCache } from '@mondaydotcomorg/atp-providers';
 import { ProvenanceSource } from '@mondaydotcomorg/atp-provenance';
 import { ExecutionResult } from '@mondaydotcomorg/atp-protocol';
 

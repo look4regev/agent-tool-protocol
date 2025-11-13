@@ -1,4 +1,4 @@
-# @agent-tool-protocol/providers
+# @mondaydotcomorg/atp-providers
 
 Production-ready provider implementations for ATP (cache, auth, OAuth, audit).
 
@@ -9,7 +9,7 @@ This package provides concrete implementations of ATP provider interfaces includ
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/providers
+npm install @mondaydotcomorg/atp-providers
 ```
 
 ## Architecture
@@ -41,7 +41,7 @@ graph TB
 In-memory cache for development and testing.
 
 ```typescript
-import { MemoryCache } from '@agent-tool-protocol/providers';
+import { MemoryCache } from '@mondaydotcomorg/atp-providers';
 
 const cache = new MemoryCache({
 	defaultTTL: 3600, // 1 hour
@@ -58,7 +58,7 @@ await cache.delete('key');
 Redis-backed cache for production and distributed systems.
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis({
@@ -89,7 +89,7 @@ const cached = await cache.get('key');
 File-based cache for simple persistence.
 
 ```typescript
-import { FileCache } from '@agent-tool-protocol/providers';
+import { FileCache } from '@mondaydotcomorg/atp-providers';
 
 const cache = new FileCache({
 	directory: './cache',
@@ -107,7 +107,7 @@ const cached = await cache.get('key');
 Environment-based authentication for simple use cases.
 
 ```typescript
-import { EnvAuthProvider } from '@agent-tool-protocol/providers';
+import { EnvAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const authProvider = new EnvAuthProvider({
 	envPrefix: 'AUTH_', // Reads AUTH_* env vars
@@ -132,7 +132,7 @@ console.log(credentials.accessToken);
 Google OAuth 2.0 integration.
 
 ```typescript
-import { GoogleOAuthProvider } from '@agent-tool-protocol/providers';
+import { GoogleOAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const oauth = new GoogleOAuthProvider({
 	clientId: process.env.GOOGLE_CLIENT_ID,
@@ -168,7 +168,7 @@ const hasScope = await oauth.checkScopes(tokens.accessToken, [
 GitHub OAuth integration.
 
 ```typescript
-import { GitHubOAuthProvider } from '@agent-tool-protocol/providers';
+import { GitHubOAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const oauth = new GitHubOAuthProvider({
 	clientId: process.env.GITHUB_CLIENT_ID,
@@ -225,7 +225,7 @@ class SlackOAuthProvider implements OAuthProvider {
 Write audit logs as JSON Lines files.
 
 ```typescript
-import { JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const auditSink = new JSONLAuditSink({
 	path: './audit-logs',
@@ -249,7 +249,7 @@ const auditSink = new JSONLAuditSink({
 Export audit events to OpenTelemetry collector.
 
 ```typescript
-import { OpenTelemetryAuditSink } from '@agent-tool-protocol/providers';
+import { OpenTelemetryAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const auditSink = new OpenTelemetryAuditSink({
 	endpoint: 'http://localhost:4318/v1/traces',
@@ -271,7 +271,7 @@ const auditSink = new OpenTelemetryAuditSink({
 ## OpenTelemetry Metrics
 
 ```typescript
-import { OTelCounter, OTelHistogram, METRIC_CONFIGS } from '@agent-tool-protocol/providers';
+import { OTelCounter, OTelHistogram, METRIC_CONFIGS } from '@mondaydotcomorg/atp-providers';
 
 // Predefined metrics
 // - atp.execution.count (counter)
@@ -282,7 +282,7 @@ import { OTelCounter, OTelHistogram, METRIC_CONFIGS } from '@agent-tool-protocol
 // - atp.cache.hits/misses (counters)
 
 // Custom attributes
-import { OTelAttribute } from '@agent-tool-protocol/providers';
+import { OTelAttribute } from '@mondaydotcomorg/atp-providers';
 
 const attributes = {
 	[OTelAttribute.EXECUTION_ID]: 'exec-123',
@@ -301,7 +301,7 @@ import {
 	GoogleOAuthProvider,
 	JSONLAuditSink,
 	OpenTelemetryAuditSink,
-} from '@agent-tool-protocol/providers';
+} from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL);

@@ -441,7 +441,7 @@ Full server configuration:
 
 ```typescript
 import { createServer } from '@agent-tool-protocol/server';
-import { RedisCache, JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { RedisCache, JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({
   execution: {
@@ -492,7 +492,7 @@ await server.start(3333);
 ### Redis Cache
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -502,7 +502,7 @@ server.setCacheProvider(new RedisCache({ redis }));
 ### Audit Logging
 
 ```typescript
-import { JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({
 	audit: {
@@ -528,7 +528,7 @@ const server = createServer({
 ### OAuth Integration
 
 ```typescript
-import { GoogleOAuthProvider } from '@agent-tool-protocol/providers';
+import { GoogleOAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const oauthProvider = new GoogleOAuthProvider({
   clientId: process.env.GOOGLE_CLIENT_ID,

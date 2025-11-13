@@ -116,7 +116,7 @@ const server = createServer({
 ### With Redis Cache
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -158,7 +158,7 @@ const server = createServer({
 ### With Audit Logging
 
 ```typescript
-import { JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({
 	audit: {
@@ -226,7 +226,7 @@ server.addAPIGroup({
 ### OAuth Integration
 
 ```typescript
-import { GoogleOAuthProvider } from '@agent-tool-protocol/providers';
+import { GoogleOAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const oauthProvider = new GoogleOAuthProvider({
 	clientId: process.env.GOOGLE_CLIENT_ID,
@@ -443,7 +443,7 @@ sequenceDiagram
 ### With Redis + PostgreSQL
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import { PostgresSaver } from '@langchain/langgraph-checkpoint-postgres';
 import Redis from 'ioredis';
 
