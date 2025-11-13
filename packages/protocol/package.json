@@ -1,6 +1,6 @@
 {
 	"name": "@agent-tool-protocol/protocol",
-	"version": "0.17.12",
+	"version": "0.17.13",
 	"description": "Core protocol types and interfaces for Agent Tool Protocol",
 	"type": "module",
 	"main": "./dist/index.js",

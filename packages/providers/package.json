@@ -1,6 +1,6 @@
 {
 	"name": "@agent-tool-protocol/providers",
-	"version": "0.17.12",
+	"version": "0.17.13",
 	"description": "Built-in providers for Agent Tool Protocol (cache, auth, audit)",
 	"type": "module",
 	"main": "./dist/index.js",

@@ -1,6 +1,6 @@
 {
 	"name": "@agent-tool-protocol/provenance",
-	"version": "0.17.12",
+	"version": "0.17.13",
 	"description": "CAMEL-inspired provenance security for LLM applications - track data origin and enforce security policies",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",

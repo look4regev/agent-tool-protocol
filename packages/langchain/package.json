@@ -1,6 +1,6 @@
 {
 	"name": "@agent-tool-protocol/langchain",
-	"version": "0.17.12",
+	"version": "0.17.13",
 	"description": "LangChain integration for Agent Tool Protocol",
 	"type": "module",
 	"main": "./dist/index.js",
