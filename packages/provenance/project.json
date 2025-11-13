@@ -1,27 +1,27 @@
 {
-	"name": "@agent-tool-protocol/providers",
+	"name": "@agent-tool-protocol/provenance",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "packages/providers/src",
+	"sourceRoot": "packages/provenance/src",
 	"projectType": "library",
 	"targets": {
 		"build": {
 			"executor": "nx:run-commands",
-			"outputs": ["{workspaceRoot}/packages/providers/dist"],
+			"outputs": ["{workspaceRoot}/packages/provenance/dist"],
 			"options": {
-				"command": "tsc --build packages/providers/tsconfig.json",
+				"command": "tsc --build packages/provenance/tsconfig.json",
 				"cwd": "{workspaceRoot}"
 			}
 		},
 		"clean": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "rm -rf packages/providers/dist"
+				"command": "rm -rf packages/provenance/dist"
 			}
 		},
 		"lint": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "cd packages/providers && npm run lint"
+				"command": "cd packages/provenance && npm run lint"
 			}
 		}
 	},
