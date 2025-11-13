@@ -1,0 +1,204 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "GitHub Mock API",
+		"version": "1.0.0",
+		"description": "Mock GitHub API for testing OAuth scope filtering"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:GITHUB_PORT"
+		}
+	],
+	"security": [
+		{
+			"bearerAuth": []
+		}
+	],
+	"components": {
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "OAuth"
+			}
+		},
+		"schemas": {
+			"User": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "integer" },
+					"login": { "type": "string" },
+					"name": { "type": "string" },
+					"email": { "type": "string" }
+				}
+			},
+			"Repository": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "integer" },
+					"name": { "type": "string" },
+					"full_name": { "type": "string" },
+					"private": { "type": "boolean" },
+					"owner": {
+						"type": "object",
+						"properties": {
+							"login": { "type": "string" },
+							"id": { "type": "integer" }
+						}
+					}
+				}
+			},
+			"Organization": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "integer" },
+					"login": { "type": "string" },
+					"description": { "type": "string" }
+				}
+			}
+		}
+	},
+	"paths": {
+		"/user": {
+			"get": {
+				"operationId": "getAuthenticatedUser",
+				"summary": "Get authenticated user",
+				"x-required-scopes": ["read:user"],
+				"x-sensitive": false,
+				"responses": {
+					"200": {
+						"description": "User information",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/User" }
+							}
+						}
+					},
+					"403": {
+						"description": "Insufficient scope"
+					}
+				}
+			}
+		},
+		"/repos": {
+			"get": {
+				"operationId": "listRepositories",
+				"summary": "List repositories",
+				"x-required-scopes": ["repo"],
+				"x-sensitive": false,
+				"responses": {
+					"200": {
+						"description": "List of repositories",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": { "$ref": "#/components/schemas/Repository" }
+								}
+							}
+						}
+					},
+					"403": {
+						"description": "Insufficient scope"
+					}
+				}
+			}
+		},
+		"/user/repos": {
+			"post": {
+				"operationId": "createRepository",
+				"summary": "Create a repository",
+				"x-required-scopes": ["repo"],
+				"x-sensitive": false,
+				"x-requires-approval": false,
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": { "type": "string" },
+									"private": { "type": "boolean" }
+								},
+								"required": ["name"]
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "Repository created",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/Repository" }
+							}
+						}
+					},
+					"403": {
+						"description": "Insufficient scope"
+					}
+				}
+			}
+		},
+		"/repos/{repoId}": {
+			"delete": {
+				"operationId": "deleteRepository",
+				"summary": "Delete a repository",
+				"x-required-scopes": ["delete_repo"],
+				"x-destructive": true,
+				"x-requires-approval": true,
+				"x-sensitive": true,
+				"parameters": [
+					{
+						"name": "repoId",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "integer" }
+					}
+				],
+				"responses": {
+					"204": {
+						"description": "Repository deleted"
+					},
+					"403": {
+						"description": "Insufficient scope"
+					},
+					"404": {
+						"description": "Repository not found"
+					}
+				}
+			}
+		},
+		"/orgs/{org}": {
+			"get": {
+				"operationId": "getOrganization",
+				"summary": "Get organization",
+				"x-required-scopes": ["admin:org"],
+				"x-sensitive": true,
+				"parameters": [
+					{
+						"name": "org",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Organization information",
+						"content": {
+							"application/json": {
+								"schema": { "$ref": "#/components/schemas/Organization" }
+							}
+						}
+					},
+					"403": {
+						"description": "Insufficient scope"
+					}
+				}
+			}
+		}
+	}
+}

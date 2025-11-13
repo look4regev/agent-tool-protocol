@@ -1,0 +1,67 @@
+{
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"targetDefaults": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["{projectRoot}/dist"],
+			"cache": true
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"outputs": ["{projectRoot}/coverage"],
+			"cache": true
+		},
+		"lint": {
+			"cache": true
+		},
+		"clean": {
+			"cache": false
+		},
+		"dev": {
+			"cache": false
+		},
+		"nx-release-publish": {
+			"dependsOn": ["build"]
+		}
+	},
+	"namedInputs": {
+		"default": ["{projectRoot}/**/*", "sharedGlobals"],
+		"production": [
+			"default",
+			"!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+			"!{projectRoot}/tsconfig.spec.json",
+			"!{projectRoot}/.eslintrc.json"
+		],
+		"sharedGlobals": ["{workspaceRoot}/tsconfig.json"]
+	},
+	"release": {
+		"projects": ["packages/*"],
+		"projectsRelationship": "independent",
+		"version": {
+			"conventionalCommits": true
+		}
+	},
+	"plugins": [
+		{
+			"plugin": "@nx/js",
+			"options": {
+				"analyzeSourceFiles": true
+			}
+		},
+		{
+			"plugin": "@nx/js/typescript",
+			"options": {
+				"typecheck": {
+					"targetName": "typecheck"
+				},
+				"build": {
+					"targetName": "build",
+					"configName": "tsconfig.lib.json",
+					"buildDepsName": "build-deps",
+					"watchDepsName": "watch-deps"
+				}
+			}
+		}
+	],
+	"defaultProject": "protocol"
+}

@@ -1,0 +1,47 @@
+{
+	"name": "@mondaydotcomorg/atp-client",
+	"version": "0.17.15",
+	"description": "Client SDK for Agent Tool Protocol",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./core": {
+			"types": "./dist/core/index.d.ts",
+			"import": "./dist/core/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json --watch",
+		"clean": "rm -rf dist *.tsbuildinfo",
+		"test": "vitest run",
+		"lint": "tsc --noEmit"
+	},
+	"keywords": [
+		"agent",
+		"protocol",
+		"client",
+		"ai",
+		"llm"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"@mondaydotcomorg/atp-protocol": "0.17.15",
+		"undici": "*",
+		"zod": "^3.23.8",
+		"zod-to-json-schema": "^3.24.6"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.1"
+	}
+}

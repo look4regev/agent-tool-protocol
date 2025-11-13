@@ -1,0 +1,30 @@
+{
+	"name": "@mondaydotcomorg/atp-langchain",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/langchain/src",
+	"projectType": "library",
+	"tags": [
+		"atp-core"
+	],
+	"targets": {
+		"build": {
+			"executor": "nx:run-commands",
+			"outputs": ["{projectRoot}/dist"],
+			"options": {
+				"command": "tsc --build packages/langchain/tsconfig.json"
+			}
+		},
+		"test": {
+			"executor": "@nx/vite:test",
+			"options": {
+				"passWithNoTests": true
+			}
+		},
+		"lint": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "cd packages/langchain && npm run lint"
+			}
+		}
+	}
+}

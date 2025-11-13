@@ -1,0 +1,26 @@
+{
+	"name": "@agent-tool-protocol/example-opentelemetry",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"start": "tsx server.ts",
+		"jaeger": "docker run -d --name jaeger -e COLLECTOR_OTLP_ENABLED=true -p 16686:16686 -p 4318:4318 jaegertracing/all-in-one:latest"
+	},
+	"dependencies": {
+		"@mondaydotcomorg/atp-protocol": "workspace:*",
+		"@mondaydotcomorg/atp-providers": "workspace:*",
+		"@mondaydotcomorg/atp-server": "workspace:*",
+		"@opentelemetry/api": "^1.9.0",
+		"@opentelemetry/auto-instrumentations-node": "^0.53.0",
+		"@opentelemetry/core": "^1.29.0",
+		"@opentelemetry/exporter-metrics-otlp-http": "^0.56.0",
+		"@opentelemetry/exporter-trace-otlp-http": "^0.56.0",
+		"@opentelemetry/resources": "^1.29.0",
+		"@opentelemetry/sdk-metrics": "^1.29.0",
+		"@opentelemetry/sdk-node": "^0.56.0",
+		"@opentelemetry/semantic-conventions": "^1.29.0"
+	},
+	"devDependencies": {
+		"tsx": "^4.7.0"
+	}
+}

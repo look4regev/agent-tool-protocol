@@ -1,0 +1,23 @@
+{
+	"name": "langchain-react-agent-example",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Production-ready LangChain React Agent with ATP integration",
+	"type": "module",
+	"scripts": {
+		"start": "tsx agent.ts",
+		"start:simple": "tsx simple-agent.ts"
+	},
+	"dependencies": {
+		"@langchain/core": "^0.3.78",
+		"@langchain/langgraph": "^0.2.0",
+		"@langchain/openai": "^0.3.0",
+		"@mondaydotcomorg/atp-langchain": "workspace:*",
+		"langchain": "^0.3.35",
+		"zod": "^4.1.11"
+	},
+	"devDependencies": {
+		"tsx": "^4.7.0",
+		"typescript": "^5.3.3"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"name": "@mondaydotcomorg/atp-runtime",
+	"version": "0.17.15",
+	"description": "Runtime SDK injected into sandbox for Agent Tool Protocol",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "npm run generate:metadata && tsc -p tsconfig.json",
+		"generate:metadata": "tsx scripts/generate-metadata.ts",
+		"dev": "tsc -p tsconfig.json --watch",
+		"clean": "rm -rf dist *.tsbuildinfo src/metadata/generated.ts",
+		"test": "vitest run",
+		"lint": "tsc --noEmit"
+	},
+	"keywords": [
+		"agent",
+		"protocol",
+		"runtime",
+		"sdk",
+		"ai",
+		"llm"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"ioredis": "^5.8.0",
+		"node-cache": "*",
+		"pino": "*",
+		"pino-pretty": "*",
+		"reflect-metadata": "^0.2.1",
+		"undici": "*"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.5",
+		"ts-json-schema-generator": "^2.4.0",
+		"ts-morph": "^21.0.1",
+		"tsx": "^4.7.0",
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.1"
+	}
+}
