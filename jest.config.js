@@ -27,7 +27,7 @@ module.exports = {
 		'^@agent-tool-protocol/server$': '<rootDir>/packages/server/src/index.ts',
 		'^@agent-tool-protocol/server/(.*)$': '<rootDir>/packages/server/$1',
 		'^@mondaydotcomorg/atp-client$': '<rootDir>/packages/client/src/index.ts',
-		'^@agent-tool-protocol/mcp-adapter$': '<rootDir>/packages/mcp-adapter/src/index.ts',
+		'^@mondaydotcomorg/atp-mcp-adapter$': '<rootDir>/packages/mcp-adapter/src/index.ts',
 		'^@mondaydotcomorg/atp-langchain$': '<rootDir>/packages/langchain/src/index.ts',
 		'^@agent-tool-protocol/providers$': '<rootDir>/packages/providers/src/index.ts',
 		// Force @babel/traverse to use compiled lib/index.js

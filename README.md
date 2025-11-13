@@ -51,7 +51,7 @@ A single script that integrates OpenAPI (Petstore) and MCP (Playwright):
 ```typescript
 import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
-import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
+import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 process.env.ATP_JWT_SECRET = process.env.ATP_JWT_SECRET || 'test-secret-key';
 

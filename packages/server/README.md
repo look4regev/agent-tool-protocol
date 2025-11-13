@@ -80,7 +80,7 @@ await server.start(3333);
 ### With MCP Support
 
 ```typescript
-import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
+import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const mcpConnector = new MCPConnector();
 

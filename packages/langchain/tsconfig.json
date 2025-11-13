@@ -10,7 +10,7 @@
 			"@agent-tool-protocol/server": ["packages/server/src/index.ts"],
 			"@mondaydotcomorg/atp-client": ["packages/client/src/index.ts"],
 			"@agent-tool-protocol/runtime": ["packages/runtime/src/index.ts"],
-			"@agent-tool-protocol/mcp-adapter": ["packages/mcp-adapter/src/index.ts"],
+			"@mondaydotcomorg/atp-mcp-adapter": ["packages/mcp-adapter/src/index.ts"],
 			"@mondaydotcomorg/atp-langchain": ["packages/langchain/src/index.ts"],
 			"@agent-tool-protocol/cli": ["packages/cli/src/index.ts"]
 		}

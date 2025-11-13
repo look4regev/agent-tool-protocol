@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/mcp-adapter",
+	"name": "@mondaydotcomorg/atp-mcp-adapter",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/mcp-adapter/src",
 	"projectType": "library",
