@@ -64,6 +64,10 @@ jobs:
         run: yarn build
         shell: bash
 
+      - name: Check for publishable changes
+        run: yarn nx release version --dry-run
+        shell: bash
+
       - name: Publish packages (DRY RUN)
         run: yarn nx release publish --dry-run
         shell: bash
