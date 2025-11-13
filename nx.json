@@ -21,9 +21,7 @@
 			"cache": false
 		},
 		"nx-release-publish": {
-			"dependsOn": [
-				"build"
-			]
+			"dependsOn": ["build"]
 		}
 	},
 	"namedInputs": {

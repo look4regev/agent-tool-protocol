@@ -53,3 +53,5 @@ coverage
 temp
 tmp
 inspector/resources.json
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
