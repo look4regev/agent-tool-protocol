@@ -18,6 +18,7 @@
 	"scripts": {
 		"build": "tsc",
 		"test": "jest",
+		"lint": "tsc --noEmit",
 		"clean": "rm -rf dist"
 	},
 	"keywords": [
