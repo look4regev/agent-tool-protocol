@@ -1,5 +1,5 @@
-import type { ProvenanceMode, SecurityPolicy } from '@agent-tool-protocol/provenance';
-export { ProvenanceMode, type SecurityPolicy } from '@agent-tool-protocol/provenance';
+import type { ProvenanceMode, SecurityPolicy } from '@mondaydotcomorg/atp-provenance';
+export { ProvenanceMode, type SecurityPolicy } from '@mondaydotcomorg/atp-provenance';
 
 /**
  * Callback types that can pause execution

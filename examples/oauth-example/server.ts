@@ -8,9 +8,9 @@
  * 4. Automatically filter tools based on user's OAuth scopes
  */
 
-import { createServer } from '@agent-tool-protocol/server';
-import { ScopeCheckerRegistry } from '@agent-tool-protocol/providers';
-import type { AuthProvider, UserCredentialData } from '@agent-tool-protocol/protocol';
+import { createServer } from '@mondaydotcomorg/atp-server';
+import { ScopeCheckerRegistry } from '@mondaydotcomorg/atp-providers';
+import type { AuthProvider, UserCredentialData } from '@mondaydotcomorg/atp-protocol';
 import express, { Request, Response, NextFunction } from 'express';
 import { randomBytes } from 'node:crypto';
 import {

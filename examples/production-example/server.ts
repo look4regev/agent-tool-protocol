@@ -3,9 +3,9 @@
  * Shows dependency injection, custom middleware, and security
  */
 
-import { createServer, loadOpenAPI, MB, HOUR, MINUTE } from '@agent-tool-protocol/server';
-import { MemoryCache, JSONLAuditSink } from '@agent-tool-protocol/providers';
-import type { Middleware } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI, MB, HOUR, MINUTE } from '@mondaydotcomorg/atp-server';
+import { MemoryCache, JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
+import type { Middleware } from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {

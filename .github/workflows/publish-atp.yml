@@ -1,0 +1,85 @@
+name: Publish
+
+on:
+  # TODO: After testing, change this to only trigger on tags for production releases
+  # push:
+  #   tags:
+  #     - v*.*.*
+  push:
+    branches:
+      - feat/odedgo/release-pipeline  # Testing branch - remove after testing
+  workflow_dispatch:  # Allows manual triggering for testing
+
+jobs:
+  publish:
+    name: Publish ATP Ecosystem to NPM
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # needed for provenance data generation
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: tree:0
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+
+      - name: Enable Corepack
+        run: corepack enable
+        shell: bash
+
+      - name: Setup Yarn
+        run: corepack prepare yarn@stable --activate
+        shell: bash
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install --immutable
+        shell: bash
+
+      - name: Print Environment Info
+        run: yarn nx report
+        shell: bash
+
+      - name: Build affected packages
+        run: yarn build
+        shell: bash
+
+      - name: Check for publishable changes
+        run: yarn nx release version --dry-run
+        shell: bash
+
+      - name: Publish packages (DRY RUN)
+        run: yarn nx release publish --dry-run
+        shell: bash
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
+      # TODO: After testing, uncomment this for actual publishing on tags
+      # - name: Publish packages (PRODUCTION)
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   run: yarn nx release publish
+      #   shell: bash
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+      #     NPM_CONFIG_PROVENANCE: true

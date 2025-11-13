@@ -1,5 +1,5 @@
-import type { Logger } from '@agent-tool-protocol/runtime';
-import { setReplayMode } from '@agent-tool-protocol/runtime';
+import type { Logger } from '@mondaydotcomorg/atp-runtime';
+import { setReplayMode } from '@mondaydotcomorg/atp-runtime';
 import type { CallbackRecord } from '../execution-state/index.js';
 
 export interface ResumeData {

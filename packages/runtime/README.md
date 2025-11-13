@@ -1,4 +1,4 @@
-# @agent-tool-protocol/runtime
+# @mondaydotcomorg/atp-runtime
 
 Runtime APIs available to agents during code execution (LLM, embedding, approval, cache, logging, progress).
 
@@ -9,7 +9,7 @@ This package provides the `atp.*` runtime APIs that agents can use when executin
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/runtime
+npm install @mondaydotcomorg/atp-runtime
 ```
 
 ## Architecture
@@ -249,7 +249,7 @@ import {
 	initializeApproval,
 	initializeVectorStore,
 	initializeLogger,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 
 // Setup LLM callback
 setClientLLMCallback({
@@ -283,7 +283,7 @@ initializeLogger({
 For deterministic execution and testing:
 
 ```typescript
-import { setReplayMode } from '@agent-tool-protocol/runtime';
+import { setReplayMode } from '@mondaydotcomorg/atp-runtime';
 
 // Enable replay mode with cached results
 setReplayMode(true);
@@ -307,7 +307,7 @@ import type {
 	ApprovalRequest,
 	ApprovalResponse,
 	ProgressUpdate,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 ```
 
 ## Metadata Generation
@@ -315,7 +315,7 @@ import type {
 Runtime APIs are decorated with metadata for automatic discovery:
 
 ```typescript
-import { GENERATED_METADATA } from '@agent-tool-protocol/runtime';
+import { GENERATED_METADATA } from '@mondaydotcomorg/atp-runtime';
 
 // Metadata includes:
 // - API names and descriptions
@@ -339,7 +339,7 @@ console.log(GENERATED_METADATA);
 ## Error Handling
 
 ```typescript
-import { PauseExecutionError, isPauseError } from '@agent-tool-protocol/runtime';
+import { PauseExecutionError, isPauseError } from '@mondaydotcomorg/atp-runtime';
 
 try {
 	const result = await atp.llm.call({ prompt: 'Hello' });
@@ -361,7 +361,7 @@ try {
 Track call order for replay:
 
 ```typescript
-import { getCallSequenceNumber } from '@agent-tool-protocol/runtime';
+import { getCallSequenceNumber } from '@mondaydotcomorg/atp-runtime';
 
 const seq = getCallSequenceNumber();
 console.log('Current sequence:', seq);
@@ -372,7 +372,7 @@ console.log('Current sequence:', seq);
 Run code in specific execution context:
 
 ```typescript
-import { runInExecutionContext } from '@agent-tool-protocol/runtime';
+import { runInExecutionContext } from '@mondaydotcomorg/atp-runtime';
 
 runInExecutionContext('exec-123', () => {
 	// All atp.* calls use this execution ID

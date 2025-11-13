@@ -4,7 +4,7 @@
 import { randomBytes } from 'node:crypto';
 import { nanoid } from 'nanoid';
 import jwt from 'jsonwebtoken';
-import type { CacheProvider, ClientToolDefinition } from '@agent-tool-protocol/protocol';
+import type { CacheProvider, ClientToolDefinition } from '@mondaydotcomorg/atp-protocol';
 
 export interface ClientSession {
 	clientId: string;

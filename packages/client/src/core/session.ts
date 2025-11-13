@@ -1,5 +1,5 @@
 import type { ClientHooks } from './types.js';
-import type { ClientToolDefinition } from '@agent-tool-protocol/protocol';
+import type { ClientToolDefinition } from '@mondaydotcomorg/atp-protocol';
 
 export class ClientSession {
 	private baseUrl: string;

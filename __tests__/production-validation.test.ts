@@ -3,14 +3,14 @@
  * Real-world scenarios from simple to complex
  */
 
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	ProvenanceMode,
 	ToolOperationType,
 	ToolSensitivityLevel,
-} from '@agent-tool-protocol/protocol';
-import { preventDataExfiltration, requireUserOrigin } from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-protocol';
+import { preventDataExfiltration, requireUserOrigin } from '@mondaydotcomorg/atp-provenance';
 
 describe('Production Validation - Real World Scenarios', () => {
 	let server: AgentToolProtocolServer;

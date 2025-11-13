@@ -3,7 +3,7 @@
  * Shows the simplest possible ATP server with custom tools
  */
 
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const server = createServer();
 

@@ -1,4 +1,4 @@
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import type { LoopCheckpoint } from '../types.js';
 import { CheckpointError, CheckpointOperation } from './errors.js';
 

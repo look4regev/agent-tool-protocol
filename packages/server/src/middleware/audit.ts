@@ -1,5 +1,5 @@
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
-import { log } from '@agent-tool-protocol/runtime';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
+import { log } from '@mondaydotcomorg/atp-runtime';
 
 export interface AuditConfig {
 	enabled: boolean;

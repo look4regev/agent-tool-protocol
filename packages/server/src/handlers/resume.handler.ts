@@ -2,8 +2,8 @@ import type { RequestContext, ResolvedServerConfig } from '../core/config.js';
 import type { SandboxExecutor } from '../executor/index.js';
 import type { ExecutionStateManager } from '../execution-state/index.js';
 import type { ClientSessionManager } from '../client-sessions.js';
-import { log } from '@agent-tool-protocol/runtime';
-import { ExecutionStatus, ProvenanceMode } from '@agent-tool-protocol/protocol';
+import { log } from '@mondaydotcomorg/atp-runtime';
+import { ExecutionStatus, ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import {
 	restoreProvenanceSnapshot,
 	captureProvenanceSnapshot,
@@ -13,7 +13,7 @@ import {
 	type ProvenanceSnapshot,
 	type ProvenanceState,
 	type SourceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import { nanoid } from 'nanoid';
 
 /**

@@ -1,4 +1,4 @@
-# @agent-tool-protocol/mcp-adapter
+# @mondaydotcomorg/atp-mcp-adapter
 
 Model Context Protocol (MCP) adapter for Agent Tool Protocol - connect MCP servers and use their tools in ATP.
 
@@ -9,7 +9,7 @@ This package enables seamless integration between MCP (Model Context Protocol) s
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/mcp-adapter
+npm install @mondaydotcomorg/atp-mcp-adapter
 ```
 
 ## Architecture
@@ -30,8 +30,8 @@ graph LR
 ### Connect to MCP Server (stdio)
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
-import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
+import { createServer } from '@mondaydotcomorg/atp-server';
+import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const server = createServer();
 const mcpConnector = new MCPConnector();
@@ -58,7 +58,7 @@ await server.start(3333);
 ### Connect to HTTP MCP Server
 
 ```typescript
-import { MCPHttpConnector } from '@agent-tool-protocol/mcp-adapter';
+import { MCPHttpConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const httpConnector = new MCPHttpConnector();
 
@@ -117,7 +117,7 @@ apis.forEach((api) => server.addAPIGroup(api));
 Connect to MCP servers running as child processes via stdio.
 
 ```typescript
-import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
+import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const connector = new MCPConnector();
 
@@ -155,7 +155,7 @@ const custom = await connector.connectToMCPServer({
 Connect to MCP servers over HTTP.
 
 ```typescript
-import { MCPHttpConnector } from '@agent-tool-protocol/mcp-adapter';
+import { MCPHttpConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const connector = new MCPHttpConnector();
 

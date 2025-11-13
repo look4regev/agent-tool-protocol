@@ -3,14 +3,14 @@ import type {
 	APIGroupConfig,
 	ClientToolDefinition,
 	ToolMetadata,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import {
 	ToolOperationType,
 	ToolSensitivityLevel,
 	ProvenanceMode,
 	CallbackType,
 	ToolOperation,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import {
 	llm,
 	cache,
@@ -25,7 +25,7 @@ import {
 	pauseForCallback,
 	nextSequenceNumber,
 	getCachedResult,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 import type { RuntimeContext } from './types.js';
 import {
 	createProvenanceProxy,
@@ -33,8 +33,8 @@ import {
 	SecurityPolicyEngine,
 	ProvenanceSource,
 	registerProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
-import { ReaderPermissions } from '@agent-tool-protocol/server';
+} from '@mondaydotcomorg/atp-provenance';
+import { ReaderPermissions } from '@mondaydotcomorg/atp-server';
 import { getHintMap, reattachProvenanceFromHints } from '../utils/provenance-reattachment.js';
 import { createASTProvenanceChecker } from './ast-provenance-bridge.js';
 

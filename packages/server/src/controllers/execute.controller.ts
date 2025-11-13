@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import type { ExecutionConfig } from '@agent-tool-protocol/protocol';
-import { ExecutionErrorCode, sanitizeInput, MAX_CODE_SIZE } from '@agent-tool-protocol/protocol';
+import type { ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
+import { ExecutionErrorCode, sanitizeInput, MAX_CODE_SIZE } from '@mondaydotcomorg/atp-protocol';
 import type { CodeValidator } from '../validator/index.js';
 import type { SandboxExecutor } from '../executor/index.js';
 import type { ExecutionStateManager } from '../execution-state/index.js';
@@ -8,7 +8,7 @@ import type { AuditConfig } from '../middleware/audit.js';
 import { auditExecution } from '../middleware/audit.js';
 import { clientCallbackManager } from '../callback/index.js';
 import { nanoid } from 'nanoid';
-import type { log } from '@agent-tool-protocol/runtime';
+import type { log } from '@mondaydotcomorg/atp-runtime';
 
 interface ExecuteContext {
 	validator: CodeValidator;

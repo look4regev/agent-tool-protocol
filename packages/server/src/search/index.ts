@@ -4,7 +4,7 @@ import type {
 	APIGroupConfig,
 	AuthProvider,
 	ScopeFilteringConfig,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 
 interface IndexedFunction {
 	apiGroup: string;

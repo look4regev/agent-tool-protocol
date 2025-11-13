@@ -3,7 +3,7 @@
  * Shows all available OTel configuration options
  */
 
-import { createServer, MB, HOUR, MINUTE } from '@agent-tool-protocol/server';
+import { createServer, MB, HOUR, MINUTE } from '@mondaydotcomorg/atp-server';
 
 // Example 1: Full configuration with all options
 const server1 = createServer({

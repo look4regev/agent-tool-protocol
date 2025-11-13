@@ -4,8 +4,8 @@ import type {
 	ExecutionResult,
 	APIGroupConfig,
 	ClientToolDefinition,
-} from '@agent-tool-protocol/protocol';
-import { ExecutionStatus, ProvenanceMode } from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus, ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import {
 	log,
 	setPauseForClient,
@@ -16,7 +16,7 @@ import {
 	setVectorStoreExecutionId,
 	clearVectorStoreExecutionId,
 	initializeApproval,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 import { nanoid } from 'nanoid';
 import type { CallbackRecord } from '../execution-state/index.js';
 import type { ClientSessionManager } from '../client-sessions.js';
@@ -45,7 +45,7 @@ import {
 	restoreProvenanceState,
 	captureProvenanceSnapshot,
 	registerProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import {
 	registerIsolateContext,
 	unregisterIsolateContext,

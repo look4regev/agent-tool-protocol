@@ -1,4 +1,4 @@
-import { CallbackType, ToolOperation } from '@agent-tool-protocol/protocol';
+import { CallbackType, ToolOperation } from '@mondaydotcomorg/atp-protocol';
 import type {
 	ClientLLMHandler,
 	ClientApprovalHandler,
@@ -7,7 +7,7 @@ import type {
 	ClientTool,
 	ClientToolDefinition,
 	ClientToolHandler,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 
 const LLMOperation = {
 	CALL: 'call',

@@ -36,10 +36,10 @@ Traditional function-calling protocols like MCP have limitations:
 
 ```bash
 # Using Yarn (recommended)
-yarn add @agent-tool-protocol/server @agent-tool-protocol/client
+yarn add @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
 
 # Using npm
-npm install @agent-tool-protocol/server @agent-tool-protocol/client
+npm install @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
 ```
 > **📝 Note:** The `--no-node-snapshot` flag is required for Node.js 20+
 ## 🎯 Quick Start
@@ -49,9 +49,9 @@ npm install @agent-tool-protocol/server @agent-tool-protocol/client
 A single script that integrates OpenAPI (Petstore) and MCP (Playwright):
 
 ```typescript
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
-import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
+import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 process.env.ATP_JWT_SECRET = process.env.ATP_JWT_SECRET || 'test-secret-key';
 
@@ -119,10 +119,10 @@ NODE_OPTIONS='--no-node-snapshot' npm start
 Use ATP with LangChain/LangGraph for autonomous agents:
 
 ```typescript
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 
 
 async function main() {
@@ -178,7 +178,7 @@ ATP provides powerful LangChain/LangGraph integration with LLM callbacks and app
 
 ```typescript
 import { MemorySaver } from '@langchain/langgraph';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 import { ChatOpenAI } from '@langchain/openai';
 
 const llm = new ChatOpenAI({ modelName: 'gpt-4.1' });
@@ -343,8 +343,8 @@ await atp.api.database.createUser({ name: 'Alice' });
 Defend against prompt injection with provenance tracking:
 
 ```typescript
-import { createServer, ProvenanceMode } from '@agent-tool-protocol/server';
-import { preventDataExfiltration, requireUserOrigin } from '@agent-tool-protocol/server';
+import { createServer, ProvenanceMode } from '@mondaydotcomorg/atp-server';
+import { preventDataExfiltration, requireUserOrigin } from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {
@@ -440,8 +440,8 @@ const types = await client.getTypeDefinitions();
 Full server configuration:
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
-import { RedisCache, JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { createServer } from '@mondaydotcomorg/atp-server';
+import { RedisCache, JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({
   execution: {
@@ -492,7 +492,7 @@ await server.start(3333);
 ### Redis Cache
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -502,7 +502,7 @@ server.setCacheProvider(new RedisCache({ redis }));
 ### Audit Logging
 
 ```typescript
-import { JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({
 	audit: {
@@ -528,7 +528,7 @@ const server = createServer({
 ### OAuth Integration
 
 ```typescript
-import { GoogleOAuthProvider } from '@agent-tool-protocol/providers';
+import { GoogleOAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const oauthProvider = new GoogleOAuthProvider({
   clientId: process.env.GOOGLE_CLIENT_ID,

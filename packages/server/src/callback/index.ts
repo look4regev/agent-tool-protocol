@@ -3,7 +3,7 @@
  *
  * Handles callbacks to clients for LLM, approval, and embedding requests
  */
-import type { ClientServices } from '@agent-tool-protocol/protocol';
+import type { ClientServices } from '@mondaydotcomorg/atp-protocol';
 
 /**
  * Callback request types

@@ -1,4 +1,4 @@
-import type { CacheProvider, AuthProvider, AuditSink } from '@agent-tool-protocol/protocol';
+import type { CacheProvider, AuthProvider, AuditSink } from '@mondaydotcomorg/atp-protocol';
 
 export interface BannerOptions {
 	port: number;

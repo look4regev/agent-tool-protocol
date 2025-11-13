@@ -5,7 +5,7 @@ import type {
 	ProvenanceMode,
 	SecurityPolicy,
 	ScopeFilteringConfig,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 
 export const MB = 1024 * 1024;
 export const GB = 1024 * 1024 * 1024;

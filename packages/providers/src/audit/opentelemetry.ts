@@ -1,5 +1,5 @@
 import { trace, context, SpanStatusCode, metrics, Span } from '@opentelemetry/api';
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
 import {
 	OTelCounter,
 	OTelHistogram,

@@ -1,5 +1,5 @@
 import { ServerResponse } from 'node:http';
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 
 /**
  * Handles HTTP request errors and sends appropriate responses

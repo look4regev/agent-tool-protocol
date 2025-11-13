@@ -1,4 +1,4 @@
-import type { ScopeChecker, TokenInfo } from '@agent-tool-protocol/protocol';
+import type { ScopeChecker, TokenInfo } from '@mondaydotcomorg/atp-protocol';
 import { createHash } from 'node:crypto';
 
 /**

@@ -1,4 +1,4 @@
-# @agent-tool-protocol/langchain
+# @mondaydotcomorg/atp-langchain
 
 LangChain and LangGraph integration for Agent Tool Protocol with production-ready human-in-the-loop support.
 
@@ -9,7 +9,7 @@ This package integrates ATP with LangChain and LangGraph, enabling agents to gen
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/langchain @langchain/core @langchain/langgraph
+npm install @mondaydotcomorg/atp-langchain @langchain/core @langchain/langgraph
 ```
 
 ## Architecture
@@ -51,7 +51,7 @@ graph TB
 ```typescript
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 
 const llm = new ChatOpenAI({ modelName: 'gpt-4' });
 
@@ -71,7 +71,7 @@ const result = await agent.invoke({
 
 ```typescript
 import { MemorySaver } from '@langchain/langgraph';
-import { createATPTools, ApprovalRequiredException } from '@agent-tool-protocol/langchain';
+import { createATPTools, ApprovalRequiredException } from '@mondaydotcomorg/atp-langchain';
 
 const llm = new ChatOpenAI({ modelName: 'gpt-4' });
 
@@ -106,7 +106,7 @@ try {
 
 ```typescript
 import { ChatOpenAI, OpenAIEmbeddings } from '@langchain/openai';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 
 const llm = new ChatOpenAI({ modelName: 'gpt-4' });
 const embeddings = new OpenAIEmbeddings({ model: 'text-embedding-3-small' });
@@ -380,7 +380,7 @@ See [`examples/langchain-react-agent/`](../../examples/langchain-react-agent/):
 
 ```typescript
 import { ChatOpenAI, OpenAIEmbeddings } from '@langchain/openai';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 
 const llm = new ChatOpenAI({ modelName: 'gpt-4' });
 const embeddings = new OpenAIEmbeddings();
@@ -412,7 +412,7 @@ import type {
 	ApprovalResponse,
 	CreateATPToolsOptions,
 	ATPToolsResult,
-} from '@agent-tool-protocol/langchain';
+} from '@mondaydotcomorg/atp-langchain';
 ```
 
 ## Requirements

@@ -6,10 +6,10 @@ import type {
 	APIGroupConfig,
 	AuditEvent,
 	ToolMetadata,
-} from '@agent-tool-protocol/protocol';
-import { ProvenanceMode } from '@agent-tool-protocol/protocol';
-import { log, initializeLogger } from '@agent-tool-protocol/runtime';
-import { shutdownLogger } from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-protocol';
+import { ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
+import { log, initializeLogger } from '@mondaydotcomorg/atp-runtime';
+import { shutdownLogger } from '@mondaydotcomorg/atp-runtime';
 import type {
 	ServerConfig,
 	Middleware,
@@ -37,7 +37,7 @@ import {
 	EnvAuthProvider,
 	MemoryCache,
 	OpenTelemetryAuditSink,
-} from '@agent-tool-protocol/providers';
+} from '@mondaydotcomorg/atp-providers';
 
 export class AgentToolProtocolServer {
 	private config: ResolvedServerConfig;

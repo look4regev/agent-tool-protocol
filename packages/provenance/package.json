@@ -1,6 +1,6 @@
 {
-	"name": "@agent-tool-protocol/provenance",
-	"version": "0.1.0",
+	"name": "@mondaydotcomorg/atp-provenance",
+	"version": "0.17.15",
 	"description": "CAMEL-inspired provenance security for LLM applications - track data origin and enforce security policies",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -18,6 +18,7 @@
 	"scripts": {
 		"build": "tsc",
 		"test": "jest",
+		"lint": "tsc --noEmit",
 		"clean": "rm -rf dist"
 	},
 	"keywords": [
@@ -32,13 +33,13 @@
 	"author": "Agent Tool Protocol Team",
 	"license": "MIT",
 	"dependencies": {
+		"@types/escodegen": "^0.0.10",
 		"acorn": "^8.11.0",
 		"acorn-walk": "^8.3.0",
 		"escodegen": "^2.1.0",
 		"nanoid": "^5.0.0"
 	},
 	"devDependencies": {
-		"@types/escodegen": "^0.0.10",
 		"@types/node": "^20.10.0",
 		"typescript": "^5.3.0"
 	},

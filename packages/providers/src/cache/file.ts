@@ -1,4 +1,4 @@
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import { promises as fs } from 'fs';
 import path from 'path';
 import os from 'os';

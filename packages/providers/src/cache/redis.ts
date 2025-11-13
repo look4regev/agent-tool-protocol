@@ -1,4 +1,4 @@
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import type Redis from 'ioredis';
 
 export interface RedisCacheOptions {

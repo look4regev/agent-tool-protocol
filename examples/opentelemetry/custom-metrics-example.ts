@@ -10,7 +10,7 @@ import {
 	OTelAttribute,
 	OTEL_TRACER_NAME,
 	OTEL_METER_NAME,
-} from '@agent-tool-protocol/providers';
+} from '@mondaydotcomorg/atp-providers';
 
 // Get tracer and meter using ATP's standard names
 const tracer = trace.getTracer(OTEL_TRACER_NAME);

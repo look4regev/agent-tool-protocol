@@ -6,7 +6,7 @@ export * from './resumable-arrays.js';
 export * from './resumable-parallel.js';
 export * from './batch-parallel.js';
 
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import { CheckpointManager, setCheckpointManager } from './checkpoint-manager.js';
 import { setRuntimeContext } from './context.js';
 

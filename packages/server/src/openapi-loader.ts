@@ -6,7 +6,7 @@ import type {
 	BearerAuthConfig,
 	BasicAuthConfig,
 	APIKeyAuthConfig,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import { readFile } from 'node:fs/promises';
 import yaml from 'js-yaml';
 

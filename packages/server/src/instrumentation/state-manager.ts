@@ -1,8 +1,8 @@
 /**
  * State Manager for Execution State Capture and Restoration
  */
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
-import { log } from '@agent-tool-protocol/runtime';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
+import { log } from '@mondaydotcomorg/atp-runtime';
 import { Serializer } from './serializer.js';
 import type { ExecutionState, StatementState, SerializedValue, BranchDecision } from './types.js';
 

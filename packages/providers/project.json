@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/providers",
+	"name": "@mondaydotcomorg/atp-providers",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/providers/src",
 	"projectType": "library",
@@ -25,5 +25,7 @@
 			}
 		}
 	},
-	"tags": []
+	"tags": [
+		"atp-core"
+	]
 }

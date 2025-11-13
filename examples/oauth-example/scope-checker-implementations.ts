@@ -5,7 +5,7 @@
  * for building your own scope checkers. Copy and customize as needed.
  */
 
-import type { ScopeChecker } from '@agent-tool-protocol/protocol';
+import type { ScopeChecker } from '@mondaydotcomorg/atp-protocol';
 
 /**
  * GitHub scope checker

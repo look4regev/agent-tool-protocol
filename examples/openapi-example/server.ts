@@ -3,7 +3,7 @@
  * Shows how to load and filter OpenAPI specifications
  */
 
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 

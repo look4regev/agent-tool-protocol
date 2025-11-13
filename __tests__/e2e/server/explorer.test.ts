@@ -1,7 +1,7 @@
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
-import { initializeCache, initializeLogger } from '@agent-tool-protocol/runtime';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
+import { initializeCache, initializeLogger } from '@mondaydotcomorg/atp-runtime';
 
 describe('ATP Server Explorer - Filesystem-like API navigation', () => {
 	let server: AgentToolProtocolServer;
@@ -288,7 +288,7 @@ describe('ATP Server Explorer - Filesystem-like API navigation', () => {
 
 	describe('Client tool integration', () => {
 		test('should create explore_api tool', () => {
-			const tools = require('@agent-tool-protocol/client').createToolsFromATPClient(client);
+			const tools = require('@mondaydotcomorg/atp-client').createToolsFromATPClient(client);
 			const exploreApiTool = tools.find((t: any) => t.name === 'explore_api');
 
 			expect(exploreApiTool).toBeDefined();
@@ -297,7 +297,7 @@ describe('ATP Server Explorer - Filesystem-like API navigation', () => {
 		});
 
 		test('explore_api tool should work correctly', async () => {
-			const tools = require('@agent-tool-protocol/client').createToolsFromATPClient(client);
+			const tools = require('@mondaydotcomorg/atp-client').createToolsFromATPClient(client);
 			const exploreApiTool = tools.find((t: any) => t.name === 'explore_api');
 
 			const result = await exploreApiTool.func({ path: '/' });
@@ -309,7 +309,7 @@ describe('ATP Server Explorer - Filesystem-like API navigation', () => {
 		});
 
 		test('explore_api tool should handle errors gracefully', async () => {
-			const tools = require('@agent-tool-protocol/client').createToolsFromATPClient(client);
+			const tools = require('@mondaydotcomorg/atp-client').createToolsFromATPClient(client);
 			const exploreApiTool = tools.find((t: any) => t.name === 'explore_api');
 
 			const result = await exploreApiTool.func({ path: '/invalid/path' });

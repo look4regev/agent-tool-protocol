@@ -1,11 +1,11 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	ExecutionStatus,
 	ToolOperationType,
 	ToolSensitivityLevel,
-} from '@agent-tool-protocol/protocol';
-import type { ClientTool } from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
+import type { ClientTool } from '@mondaydotcomorg/atp-protocol';
 import {
 	createTestATPServer,
 	createCleanupTracker,

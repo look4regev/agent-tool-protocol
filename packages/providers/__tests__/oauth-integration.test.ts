@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ScopeCheckerRegistry } from '../src/oauth/scope-checkers.js';
-import type { AuthProvider, UserCredentialData } from '@agent-tool-protocol/protocol';
+import type { AuthProvider, UserCredentialData } from '@mondaydotcomorg/atp-protocol';
 
 // Mock fetch globally
 global.fetch = vi.fn();

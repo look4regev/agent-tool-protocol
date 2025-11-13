@@ -1,4 +1,4 @@
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 import type { Server } from 'node:http';
 import { flushAuditQueue, shutdownAudit } from './middleware/audit.js';
 import type { ExecutionStateManager } from './execution-state/index.js';

@@ -1,6 +1,6 @@
-import { AgentToolProtocolServer, createServer } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
-import { MemoryCache } from '@agent-tool-protocol/providers';
+import { AgentToolProtocolServer, createServer } from '@mondaydotcomorg/atp-server';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
+import { MemoryCache } from '@mondaydotcomorg/atp-providers';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { exec } from 'child_process';

@@ -1,4 +1,4 @@
-import type { AuthProvider } from '@agent-tool-protocol/protocol';
+import type { AuthProvider } from '@mondaydotcomorg/atp-protocol';
 
 /**
  * Environment variable based auth provider

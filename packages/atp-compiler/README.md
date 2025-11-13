@@ -1,4 +1,4 @@
-# @agent-tool-protocol/atp-compiler
+# @mondaydotcomorg/atp-compiler
 
 Production-ready compiler for transforming async iteration patterns into resumable operations with checkpoint-based state management.
 
@@ -9,7 +9,7 @@ The ATP compiler automatically transforms async loops and array methods into res
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/atp-compiler
+npm install @mondaydotcomorg/atp-compiler
 ```
 
 ## Architecture
@@ -43,8 +43,8 @@ graph TB
 ## Quick Start
 
 ```typescript
-import { ATPCompiler, initializeRuntime } from '@agent-tool-protocol/atp-compiler';
-import { cacheProvider } from '@agent-tool-protocol/protocol';
+import { ATPCompiler, initializeRuntime } from '@mondaydotcomorg/atp-compiler';
+import { cacheProvider } from '@mondaydotcomorg/atp-protocol';
 
 // Initialize runtime
 initializeRuntime({
@@ -166,7 +166,7 @@ const result = compiler.transform(code);
 ### Runtime Initialization
 
 ```typescript
-import { initializeRuntime } from '@agent-tool-protocol/atp-compiler';
+import { initializeRuntime } from '@mondaydotcomorg/atp-compiler';
 
 initializeRuntime({
 	executionId: 'unique-exec-id',
@@ -226,7 +226,7 @@ import {
 	isBatchPauseError,
 	isCheckpointError,
 	isTransformationError,
-} from '@agent-tool-protocol/atp-compiler';
+} from '@mondaydotcomorg/atp-compiler';
 
 try {
 	const result = compiler.transform(code);
@@ -260,7 +260,7 @@ try {
 
 ```typescript
 // In executor.ts
-import { ATPCompiler, initializeRuntime } from '@agent-tool-protocol/atp-compiler';
+import { ATPCompiler, initializeRuntime } from '@mondaydotcomorg/atp-compiler';
 
 const compiler = new ATPCompiler();
 
@@ -282,8 +282,8 @@ if (cacheProvider) {
 ## Example: Transform and Execute
 
 ```typescript
-import { ATPCompiler, initializeRuntime } from '@agent-tool-protocol/atp-compiler';
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { ATPCompiler, initializeRuntime } from '@mondaydotcomorg/atp-compiler';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis();

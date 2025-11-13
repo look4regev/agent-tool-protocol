@@ -1,4 +1,4 @@
-import type { APIGroupConfig } from '@agent-tool-protocol/protocol';
+import type { APIGroupConfig } from '@mondaydotcomorg/atp-protocol';
 import { APIAggregator } from '../aggregator/index.js';
 
 export async function getDefinitions(apiGroups: APIGroupConfig[]): Promise<unknown> {

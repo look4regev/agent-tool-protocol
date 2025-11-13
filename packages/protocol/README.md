@@ -1,4 +1,4 @@
-# @agent-tool-protocol/protocol
+# @mondaydotcomorg/atp-protocol
 
 Core protocol types, schemas, validation, and authentication for Agent Tool Protocol.
 
@@ -9,7 +9,7 @@ This package provides the foundational types and interfaces used across ATP, inc
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/protocol
+npm install @mondaydotcomorg/atp-protocol
 ```
 
 ## Architecture
@@ -42,7 +42,7 @@ import type {
 	ExecutionConfig,
 	CallbackType,
 	ClientLLMHandler,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 ```
 
 ### Schemas
@@ -54,7 +54,7 @@ import {
 	ExecutionConfigSchema,
 	ExecutionResultSchema,
 	SearchOptionsSchema,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 
 // Validate execution config
 const config = ExecutionConfigSchema.parse(userInput);
@@ -65,7 +65,7 @@ const config = ExecutionConfigSchema.parse(userInput);
 Validation utilities:
 
 ```typescript
-import { validateExecutionConfig, validateToolDefinition } from '@agent-tool-protocol/protocol';
+import { validateExecutionConfig, validateToolDefinition } from '@mondaydotcomorg/atp-protocol';
 
 const errors = validateExecutionConfig(config);
 if (errors.length > 0) {
@@ -78,7 +78,7 @@ if (errors.length > 0) {
 Base interfaces for authentication:
 
 ```typescript
-import type { AuthProvider } from '@agent-tool-protocol/protocol';
+import type { AuthProvider } from '@mondaydotcomorg/atp-protocol';
 
 class CustomAuthProvider implements AuthProvider {
 	name = 'custom';
@@ -94,7 +94,7 @@ class CustomAuthProvider implements AuthProvider {
 OAuth provider interfaces and utilities:
 
 ```typescript
-import type { OAuthProvider, OAuthScopeChecker } from '@agent-tool-protocol/protocol';
+import type { OAuthProvider, OAuthScopeChecker } from '@mondaydotcomorg/atp-protocol';
 
 // Implement OAuth provider
 class GoogleOAuthProvider implements OAuthProvider {
@@ -214,7 +214,7 @@ import {
 	ExecutionConfigSchema,
 	ExecutionStatus,
 	CallbackType,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 
 // Create execution config with validation
 const config: ExecutionConfig = {

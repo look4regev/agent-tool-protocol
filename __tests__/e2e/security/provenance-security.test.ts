@@ -6,8 +6,8 @@
  */
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	preventDataExfiltration,
 	preventDataExfiltrationWithApproval,
@@ -15,10 +15,10 @@ import {
 	requireUserOriginWithApproval,
 	blockLLMRecipients,
 	blockLLMRecipientsWithApproval,
-} from '@agent-tool-protocol/server';
+} from '@mondaydotcomorg/atp-server';
 import { nanoid } from 'nanoid';
-import { ToolOperationType, ToolSensitivityLevel } from '@agent-tool-protocol/protocol';
-import { ProvenanceMode } from '@agent-tool-protocol/provenance';
+import { ToolOperationType, ToolSensitivityLevel } from '@mondaydotcomorg/atp-protocol';
+import { ProvenanceMode } from '@mondaydotcomorg/atp-provenance';
 
 const TEST_PORT = 3902;
 const TEST_API_KEY = `test-key-${nanoid()}`;

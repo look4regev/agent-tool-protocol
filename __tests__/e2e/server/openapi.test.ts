@@ -3,7 +3,7 @@
  * Tests loading OpenAPI specs, filtering, and conversion to ATP
  */
 
-import { loadOpenAPI } from '@agent-tool-protocol/server';
+import { loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { writeFileSync, unlinkSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';

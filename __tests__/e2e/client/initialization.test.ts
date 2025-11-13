@@ -3,8 +3,8 @@
  * Tests client session creation, token management, and verification
  */
 
-import { createServer } from '@agent-tool-protocol/server';
-import { MemoryCache } from '@agent-tool-protocol/providers';
+import { createServer } from '@mondaydotcomorg/atp-server';
+import { MemoryCache } from '@mondaydotcomorg/atp-providers';
 
 describe('Client Initialization', () => {
 	let server: any;

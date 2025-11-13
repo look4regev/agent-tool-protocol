@@ -2,17 +2,17 @@ import type { RequestContext, ResolvedServerConfig } from '../core/config.js';
 import type { SandboxExecutor } from '../executor/index.js';
 import type { ExecutionStateManager } from '../execution-state/index.js';
 import type { ClientSessionManager } from '../client-sessions.js';
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
-import { ExecutionStatus, ProvenanceMode } from '@agent-tool-protocol/protocol';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus, ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import { nanoid } from 'nanoid';
 import {
 	captureProvenanceSnapshot,
 	verifyProvenanceHints,
 	type ProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import { emitProvenanceTokens } from '../utils/token-emitter.js';
 import { storeHintMap, clearHintMap } from '../utils/provenance-reattachment.js';
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 
 /**
  * Recursively remove __prov_id__ properties from result

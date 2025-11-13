@@ -5,8 +5,8 @@
  * short-lived authentication tokens (e.g., 3-minute TTL bearer tokens)
  */
 
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
-import type { ClientHooks } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
+import type { ClientHooks } from '@mondaydotcomorg/atp-client';
 
 /**
  * Token Manager - Handles token lifecycle with caching

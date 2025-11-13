@@ -1,7 +1,7 @@
 import { describe, test, expect, beforeAll } from '@jest/globals';
-import { SandboxExecutor } from '@agent-tool-protocol/server';
-import { initializeCache, initializeLogger } from '@agent-tool-protocol/runtime';
-import type { ExecutionConfig } from '@agent-tool-protocol/protocol';
+import { SandboxExecutor } from '@mondaydotcomorg/atp-server';
+import { initializeCache, initializeLogger } from '@mondaydotcomorg/atp-runtime';
+import type { ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
 
 describe('Sandbox Executor', () => {
 	let executor: SandboxExecutor;

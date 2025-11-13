@@ -12,10 +12,10 @@
  * - Production-ready async approval workflows
  */
 
-import { AgentToolProtocolClient, ClientCallbackError } from '@agent-tool-protocol/client';
-import type { ClientHooks } from '@agent-tool-protocol/client';
-import type { ExecutionResult, ExecutionConfig, ClientTool } from '@agent-tool-protocol/protocol';
-import { ExecutionStatus, CallbackType } from '@agent-tool-protocol/protocol';
+import { AgentToolProtocolClient, ClientCallbackError } from '@mondaydotcomorg/atp-client';
+import type { ClientHooks } from '@mondaydotcomorg/atp-client';
+import type { ExecutionResult, ExecutionConfig, ClientTool } from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus, CallbackType } from '@mondaydotcomorg/atp-protocol';
 import type { BaseChatModel } from '@langchain/core/language_models/chat_models';
 import type { BaseMessage } from '@langchain/core/messages';
 import { HumanMessage, SystemMessage, AIMessage } from '@langchain/core/messages';

@@ -6,8 +6,8 @@
 import * as acorn from 'acorn';
 import * as walk from 'acorn-walk';
 import * as escodegen from 'escodegen';
-import type { ProvenanceMetadata } from '@agent-tool-protocol/provenance';
-import { computeDigest } from '@agent-tool-protocol/provenance';
+import type { ProvenanceMetadata } from '@mondaydotcomorg/atp-provenance';
+import { computeDigest } from '@mondaydotcomorg/atp-provenance';
 
 /**
  * Instrument string literals in code that match hint digests

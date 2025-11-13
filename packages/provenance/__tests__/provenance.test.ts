@@ -14,8 +14,8 @@ import {
 	preventDataExfiltration,
 	requireUserOrigin,
 	blockLLMRecipients,
-} from '@agent-tool-protocol/provenance';
-import { log } from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-provenance';
+import { log } from '@mondaydotcomorg/atp-runtime';
 
 describe('ProvenanceProxy', () => {
 	it('should wrap values with provenance metadata', () => {
@@ -231,7 +231,7 @@ describe('Approval Policy Actions', () => {
 	const logger = log.child({ test: 'approval-policies' });
 
 	it('should return log action when policy passes', async () => {
-		const { preventDataExfiltration } = await import('@agent-tool-protocol/provenance');
+		const { preventDataExfiltration } = await import('@mondaydotcomorg/atp-provenance');
 
 		const args = {
 			to: 'bob@company.com',
@@ -243,7 +243,7 @@ describe('Approval Policy Actions', () => {
 	});
 
 	it('should return block action when policy blocks', async () => {
-		const { preventDataExfiltration } = await import('@agent-tool-protocol/provenance');
+		const { preventDataExfiltration } = await import('@mondaydotcomorg/atp-provenance');
 
 		const sensitiveData = createProvenanceProxy(
 			{ ssn: '123-45-6789', name: 'Alice' },
@@ -267,7 +267,7 @@ describe('Approval Policy Actions', () => {
 	});
 
 	it('should return approve action when approval policy is triggered', async () => {
-		const { preventDataExfiltrationWithApproval } = await import('@agent-tool-protocol/provenance');
+		const { preventDataExfiltrationWithApproval } = await import('@mondaydotcomorg/atp-provenance');
 
 		const sensitiveData = createProvenanceProxy(
 			{ ssn: '123-45-6789', name: 'Alice' },
@@ -297,7 +297,7 @@ describe('Approval Policy Actions', () => {
 	});
 
 	it('should handle approval callback for approve action', async () => {
-		const { preventDataExfiltrationWithApproval } = await import('@agent-tool-protocol/provenance');
+		const { preventDataExfiltrationWithApproval } = await import('@mondaydotcomorg/atp-provenance');
 
 		const policyEngine = new SecurityPolicyEngine([preventDataExfiltrationWithApproval], logger);
 
@@ -333,7 +333,7 @@ describe('Approval Policy Actions', () => {
 	});
 
 	it('should throw error when approval is denied', async () => {
-		const { preventDataExfiltrationWithApproval } = await import('@agent-tool-protocol/provenance');
+		const { preventDataExfiltrationWithApproval } = await import('@mondaydotcomorg/atp-provenance');
 
 		const policyEngine = new SecurityPolicyEngine([preventDataExfiltrationWithApproval], logger);
 
@@ -363,7 +363,7 @@ describe('Approval Policy Actions', () => {
 	});
 
 	it('should throw error when approval callback not configured', async () => {
-		const { preventDataExfiltrationWithApproval } = await import('@agent-tool-protocol/provenance');
+		const { preventDataExfiltrationWithApproval } = await import('@mondaydotcomorg/atp-provenance');
 
 		const policyEngine = new SecurityPolicyEngine([preventDataExfiltrationWithApproval], logger);
 		// No approval callback set
@@ -390,7 +390,7 @@ describe('Approval Policy Actions', () => {
 	});
 
 	it('should support log action for audit policies', async () => {
-		const { auditSensitiveAccess } = await import('@agent-tool-protocol/provenance');
+		const { auditSensitiveAccess } = await import('@mondaydotcomorg/atp-provenance');
 
 		const args = { id: '123' };
 
@@ -401,7 +401,7 @@ describe('Approval Policy Actions', () => {
 
 	it('should handle all three policy actions correctly', async () => {
 		const { preventDataExfiltration, preventDataExfiltrationWithApproval, auditSensitiveAccess } =
-			await import('@agent-tool-protocol/provenance');
+			await import('@mondaydotcomorg/atp-provenance');
 
 		const policyEngine = new SecurityPolicyEngine(
 			[auditSensitiveAccess, preventDataExfiltrationWithApproval],

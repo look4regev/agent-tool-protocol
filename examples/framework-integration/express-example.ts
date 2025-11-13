@@ -7,7 +7,7 @@ import express from 'express';
 import cors from 'cors';
 // @ts-ignore - express-rate-limit types may not be available
 import rateLimit from 'express-rate-limit';
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const app = express();
 const atpServer = createServer();

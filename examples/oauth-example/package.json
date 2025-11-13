@@ -1,6 +1,7 @@
 {
 	"name": "atp-oauth-example",
 	"version": "1.0.0",
+	"private": true,
 	"description": "Complete OAuth flow example with user-scoped credentials for Agent Tool Protocol",
 	"main": "server.ts",
 	"scripts": {
@@ -8,9 +9,9 @@
 		"start": "tsx server.ts"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*",
-		"@agent-tool-protocol/providers": "workspace:*",
-		"@agent-tool-protocol/server": "workspace:*",
+		"@mondaydotcomorg/atp-protocol": "workspace:*",
+		"@mondaydotcomorg/atp-providers": "workspace:*",
+		"@mondaydotcomorg/atp-server": "workspace:*",
 		"express": "^4.18.2"
 	},
 	"devDependencies": {

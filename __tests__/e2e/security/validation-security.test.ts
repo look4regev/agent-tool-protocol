@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
-import { createServer, type AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { createServer, type AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 
 describe('Validation and Security E2E', () => {
 	let server: AgentToolProtocolServer;
@@ -305,9 +305,9 @@ describe('Validation and Security E2E', () => {
 			await validationServer?.stop();
 		});
 
-		it('should block ALL imports including @agent-tool-protocol/runtime', async () => {
+		it('should block ALL imports including @mondaydotcomorg/atp-runtime', async () => {
 			const code = `
-				import { atp } from '@agent-tool-protocol/runtime';
+				import { atp } from '@mondaydotcomorg/atp-runtime';
 				return { ok: true };
 			`;
 

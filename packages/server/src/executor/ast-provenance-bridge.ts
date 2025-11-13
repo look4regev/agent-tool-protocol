@@ -2,7 +2,7 @@
  * Bridge between AST tracker in isolated-vm and host policy engine
  */
 import * as ivm from 'isolated-vm';
-import { getProvenance, getProvenanceForPrimitive } from '@agent-tool-protocol/provenance';
+import { getProvenance, getProvenanceForPrimitive } from '@mondaydotcomorg/atp-provenance';
 
 // Store active isolate contexts for AST mode provenance checking
 const activeIsolates = new Map<string, ivm.Context>();

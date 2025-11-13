@@ -3,8 +3,8 @@
  */
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import { ToolOperationType, ToolSensitivityLevel } from '@agent-tool-protocol/protocol';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
+import { ToolOperationType, ToolSensitivityLevel } from '@mondaydotcomorg/atp-protocol';
 import fetch from 'node-fetch';
 
 const TEST_PORT = 3503;

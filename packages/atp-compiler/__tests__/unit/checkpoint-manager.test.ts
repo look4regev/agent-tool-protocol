@@ -1,5 +1,5 @@
 import { CheckpointManager } from '../../src/runtime/checkpoint-manager';
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import type { LoopCheckpoint } from '../../src/types';
 
 describe('CheckpointManager', () => {

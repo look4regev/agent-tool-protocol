@@ -1,5 +1,5 @@
-import type { Logger } from '@agent-tool-protocol/runtime';
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { Logger } from '@mondaydotcomorg/atp-runtime';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import {
 	ATPCompiler,
 	initializeRuntime as initializeCompilerRuntime,
@@ -17,7 +17,7 @@ import {
 	resumablePromiseAll,
 	resumablePromiseAllSettled,
 	batchParallel,
-} from '@agent-tool-protocol/atp-compiler';
+} from '@mondaydotcomorg/atp-compiler';
 import { ATP_COMPILER_ENABLED, ATP_BATCH_SIZE_THRESHOLD } from './constants.js';
 
 const transformCache = new Map<string, string>();

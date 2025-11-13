@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import type { AuthProvider, UserCredentialData } from '@agent-tool-protocol/protocol';
+import type { AuthProvider, UserCredentialData } from '@mondaydotcomorg/atp-protocol';
 
 // Mock in-memory implementation for testing
 class MockAuthProvider implements AuthProvider {

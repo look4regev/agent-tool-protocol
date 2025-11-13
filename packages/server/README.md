@@ -1,4 +1,4 @@
-# @agent-tool-protocol/server
+# @mondaydotcomorg/atp-server
 
 Production-ready ATP server with sandboxed execution, API aggregation, semantic search, and state management.
 
@@ -9,7 +9,7 @@ The ATP server provides secure, sandboxed TypeScript execution with built-in run
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/server
+npm install @mondaydotcomorg/atp-server
 ```
 
 ## Architecture
@@ -39,7 +39,7 @@ graph TB
 ### Basic Server
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {
@@ -55,7 +55,7 @@ console.log('ATP server running on http://localhost:3333');
 ### With OpenAPI Integration
 
 ```typescript
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 
 const server = createServer();
 
@@ -80,7 +80,7 @@ await server.start(3333);
 ### With MCP Support
 
 ```typescript
-import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
+import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const mcpConnector = new MCPConnector();
 
@@ -116,7 +116,7 @@ const server = createServer({
 ### With Redis Cache
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -145,7 +145,7 @@ import {
 	ProvenanceMode,
 	preventDataExfiltration,
 	requireUserOrigin,
-} from '@agent-tool-protocol/server';
+} from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {
@@ -158,7 +158,7 @@ const server = createServer({
 ### With Audit Logging
 
 ```typescript
-import { JSONLAuditSink } from '@agent-tool-protocol/providers';
+import { JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({
 	audit: {
@@ -226,7 +226,7 @@ server.addAPIGroup({
 ### OAuth Integration
 
 ```typescript
-import { GoogleOAuthProvider } from '@agent-tool-protocol/providers';
+import { GoogleOAuthProvider } from '@mondaydotcomorg/atp-providers';
 
 const oauthProvider = new GoogleOAuthProvider({
 	clientId: process.env.GOOGLE_CLIENT_ID,
@@ -375,7 +375,7 @@ await atp.api.database.createUser({ name: 'Alice' });
 ## Middleware
 
 ```typescript
-import type { Middleware, RequestContext } from '@agent-tool-protocol/server';
+import type { Middleware, RequestContext } from '@mondaydotcomorg/atp-server';
 
 const loggingMiddleware: Middleware = async (context: RequestContext, next) => {
 	console.log(`${context.method} ${context.path}`);
@@ -443,7 +443,7 @@ sequenceDiagram
 ### With Redis + PostgreSQL
 
 ```typescript
-import { RedisCache } from '@agent-tool-protocol/providers';
+import { RedisCache } from '@mondaydotcomorg/atp-providers';
 import { PostgresSaver } from '@langchain/langgraph-checkpoint-postgres';
 import Redis from 'ioredis';
 
