@@ -1,4 +1,4 @@
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
 import { createATPTools } from '@mondaydotcomorg/atp-langchain';

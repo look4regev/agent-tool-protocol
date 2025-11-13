@@ -1,4 +1,4 @@
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 /**
  * Basic ATP server for client tools example

@@ -6,7 +6,7 @@
  */
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	preventDataExfiltration,
@@ -15,7 +15,7 @@ import {
 	requireUserOriginWithApproval,
 	blockLLMRecipients,
 	blockLLMRecipientsWithApproval,
-} from '@agent-tool-protocol/server';
+} from '@mondaydotcomorg/atp-server';
 import { nanoid } from 'nanoid';
 import { ToolOperationType, ToolSensitivityLevel } from '@mondaydotcomorg/atp-protocol';
 import { ProvenanceMode } from '@mondaydotcomorg/atp-provenance';

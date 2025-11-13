@@ -36,10 +36,10 @@ Traditional function-calling protocols like MCP have limitations:
 
 ```bash
 # Using Yarn (recommended)
-yarn add @agent-tool-protocol/server @mondaydotcomorg/atp-client
+yarn add @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
 
 # Using npm
-npm install @agent-tool-protocol/server @mondaydotcomorg/atp-client
+npm install @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
 ```
 > **📝 Note:** The `--no-node-snapshot` flag is required for Node.js 20+
 ## 🎯 Quick Start
@@ -49,7 +49,7 @@ npm install @agent-tool-protocol/server @mondaydotcomorg/atp-client
 A single script that integrates OpenAPI (Petstore) and MCP (Playwright):
 
 ```typescript
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
@@ -119,7 +119,7 @@ NODE_OPTIONS='--no-node-snapshot' npm start
 Use ATP with LangChain/LangGraph for autonomous agents:
 
 ```typescript
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
 import { createATPTools } from '@mondaydotcomorg/atp-langchain';
@@ -343,8 +343,8 @@ await atp.api.database.createUser({ name: 'Alice' });
 Defend against prompt injection with provenance tracking:
 
 ```typescript
-import { createServer, ProvenanceMode } from '@agent-tool-protocol/server';
-import { preventDataExfiltration, requireUserOrigin } from '@agent-tool-protocol/server';
+import { createServer, ProvenanceMode } from '@mondaydotcomorg/atp-server';
+import { preventDataExfiltration, requireUserOrigin } from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {
@@ -440,7 +440,7 @@ const types = await client.getTypeDefinitions();
 Full server configuration:
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 import { RedisCache, JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 
 const server = createServer({

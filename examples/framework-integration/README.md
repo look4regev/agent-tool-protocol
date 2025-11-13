@@ -23,7 +23,7 @@ Integrate ATP with Express and use the Express middleware ecosystem:
 
 ```typescript
 import express from 'express';
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const app = express();
 const atpServer = createServer();
@@ -50,7 +50,7 @@ Integrate ATP with Fastify and use Fastify plugins:
 
 ```typescript
 import Fastify from 'fastify';
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const fastify = Fastify();
 const atpServer = createServer();
@@ -77,7 +77,7 @@ Use the raw Node.js request handler for maximum flexibility:
 
 ```typescript
 import { createServer as createHTTPServer } from 'node:http';
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const atpServer = createServer();
 const atpHandler = atpServer.handler();

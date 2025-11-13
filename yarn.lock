@@ -9,9 +9,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@agent-tool-protocol/example-opentelemetry@workspace:examples/opentelemetry"
   dependencies:
-    "@agent-tool-protocol/server": "workspace:*"
     "@mondaydotcomorg/atp-protocol": "workspace:*"
     "@mondaydotcomorg/atp-providers": "workspace:*"
+    "@mondaydotcomorg/atp-server": "workspace:*"
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/auto-instrumentations-node": "npm:^0.53.0"
     "@opentelemetry/core": "npm:^1.29.0"
@@ -22,43 +22,6 @@ __metadata:
     "@opentelemetry/sdk-node": "npm:^0.56.0"
     "@opentelemetry/semantic-conventions": "npm:^1.29.0"
     tsx: "npm:^4.7.0"
-  languageName: unknown
-  linkType: soft
-
-"@agent-tool-protocol/server@npm:*, @agent-tool-protocol/server@workspace:*, @agent-tool-protocol/server@workspace:packages/server":
-  version: 0.0.0-use.local
-  resolution: "@agent-tool-protocol/server@workspace:packages/server"
-  dependencies:
-    "@babel/generator": "npm:^7.26.0"
-    "@babel/parser": "npm:^7.26.0"
-    "@babel/traverse": "npm:^7.26.0"
-    "@babel/types": "npm:^7.26.0"
-    "@mondaydotcomorg/atp-compiler": "workspace:*"
-    "@mondaydotcomorg/atp-protocol": "workspace:*"
-    "@mondaydotcomorg/atp-provenance": "workspace:*"
-    "@mondaydotcomorg/atp-runtime": "workspace:*"
-    "@opentelemetry/api": "npm:^1.9.0"
-    "@opentelemetry/auto-instrumentations-node": "npm:^0.66.0"
-    "@opentelemetry/core": "npm:^2.2.0"
-    "@opentelemetry/exporter-metrics-otlp-http": "npm:^0.207.0"
-    "@opentelemetry/exporter-trace-otlp-http": "npm:^0.207.0"
-    "@opentelemetry/resources": "npm:^2.2.0"
-    "@opentelemetry/sdk-node": "npm:^0.207.0"
-    "@opentelemetry/semantic-conventions": "npm:^1.37.0"
-    "@types/acorn": "npm:^6.0.4"
-    "@types/babel__generator": "npm:^7.6.8"
-    "@types/babel__traverse": "npm:^7.20.5"
-    "@types/escodegen": "npm:^0.0.10"
-    "@types/js-yaml": "npm:^4.0.9"
-    "@types/jsonwebtoken": "npm:^9.0.5"
-    "@types/node": "npm:^20.11.5"
-    isolated-vm: "npm:5.0.4"
-    js-yaml: "npm:^4.1.0"
-    jsonwebtoken: "npm:^9.0.2"
-    nanoid: "npm:^5.1.6"
-    rate-limiter-flexible: "npm:*"
-    typescript: "npm:^5.3.3"
-    vitest: "npm:^1.2.1"
   languageName: unknown
   linkType: soft
 
@@ -3656,9 +3619,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mondaydotcomorg/atp-mcp-adapter@workspace:packages/mcp-adapter"
   dependencies:
-    "@agent-tool-protocol/server": "workspace:*"
     "@modelcontextprotocol/sdk": "npm:^0.5.0"
     "@mondaydotcomorg/atp-protocol": "workspace:*"
+    "@mondaydotcomorg/atp-server": "workspace:*"
     typescript: "npm:^5.3.3"
     vitest: "npm:^1.2.1"
     zod: "npm:^4.1.11"
@@ -3719,6 +3682,43 @@ __metadata:
   peerDependenciesMeta:
     ioredis:
       optional: true
+  languageName: unknown
+  linkType: soft
+
+"@mondaydotcomorg/atp-server@npm:*, @mondaydotcomorg/atp-server@workspace:*, @mondaydotcomorg/atp-server@workspace:packages/server":
+  version: 0.0.0-use.local
+  resolution: "@mondaydotcomorg/atp-server@workspace:packages/server"
+  dependencies:
+    "@babel/generator": "npm:^7.26.0"
+    "@babel/parser": "npm:^7.26.0"
+    "@babel/traverse": "npm:^7.26.0"
+    "@babel/types": "npm:^7.26.0"
+    "@mondaydotcomorg/atp-compiler": "workspace:*"
+    "@mondaydotcomorg/atp-protocol": "workspace:*"
+    "@mondaydotcomorg/atp-provenance": "workspace:*"
+    "@mondaydotcomorg/atp-runtime": "workspace:*"
+    "@opentelemetry/api": "npm:^1.9.0"
+    "@opentelemetry/auto-instrumentations-node": "npm:^0.66.0"
+    "@opentelemetry/core": "npm:^2.2.0"
+    "@opentelemetry/exporter-metrics-otlp-http": "npm:^0.207.0"
+    "@opentelemetry/exporter-trace-otlp-http": "npm:^0.207.0"
+    "@opentelemetry/resources": "npm:^2.2.0"
+    "@opentelemetry/sdk-node": "npm:^0.207.0"
+    "@opentelemetry/semantic-conventions": "npm:^1.37.0"
+    "@types/acorn": "npm:^6.0.4"
+    "@types/babel__generator": "npm:^7.6.8"
+    "@types/babel__traverse": "npm:^7.20.5"
+    "@types/escodegen": "npm:^0.0.10"
+    "@types/js-yaml": "npm:^4.0.9"
+    "@types/jsonwebtoken": "npm:^9.0.5"
+    "@types/node": "npm:^20.11.5"
+    isolated-vm: "npm:5.0.4"
+    js-yaml: "npm:^4.1.0"
+    jsonwebtoken: "npm:^9.0.2"
+    nanoid: "npm:^5.1.6"
+    rate-limiter-flexible: "npm:*"
+    typescript: "npm:^5.3.3"
+    vitest: "npm:^1.2.1"
   languageName: unknown
   linkType: soft
 
@@ -7936,9 +7936,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "atp-client-tools-example@workspace:examples/client-tools"
   dependencies:
-    "@agent-tool-protocol/server": "workspace:*"
     "@mondaydotcomorg/atp-client": "workspace:*"
     "@mondaydotcomorg/atp-protocol": "workspace:*"
+    "@mondaydotcomorg/atp-server": "workspace:*"
     tsx: "npm:^4.7.0"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -7948,9 +7948,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "atp-framework-integration-examples@workspace:examples/framework-integration"
   dependencies:
-    "@agent-tool-protocol/server": "workspace:*"
     "@fastify/cors": "npm:^9.0.1"
     "@fastify/rate-limit": "npm:^9.1.0"
+    "@mondaydotcomorg/atp-server": "workspace:*"
     "@types/cors": "npm:^2.8.17"
     "@types/express": "npm:^4.17.21"
     cors: "npm:^2.8.5"
@@ -7966,9 +7966,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "atp-oauth-example@workspace:examples/oauth-example"
   dependencies:
-    "@agent-tool-protocol/server": "workspace:*"
     "@mondaydotcomorg/atp-protocol": "workspace:*"
     "@mondaydotcomorg/atp-providers": "workspace:*"
+    "@mondaydotcomorg/atp-server": "workspace:*"
     "@types/express": "npm:^4.17.21"
     "@types/node": "npm:^20.10.0"
     express: "npm:^4.18.2"
@@ -11817,12 +11817,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "langchain-quickstart-example@workspace:examples/langchain-quickstart"
   dependencies:
-    "@agent-tool-protocol/server": "npm:*"
     "@langchain/core": "npm:^0.3.22"
     "@langchain/langgraph": "npm:^0.2.28"
     "@langchain/openai": "npm:^0.3.17"
     "@mondaydotcomorg/atp-client": "npm:*"
     "@mondaydotcomorg/atp-langchain": "npm:*"
+    "@mondaydotcomorg/atp-server": "npm:*"
     tsx: "npm:^4.19.2"
   languageName: unknown
   linkType: soft
@@ -13856,9 +13856,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "quickstart-example@workspace:examples/quickstart"
   dependencies:
-    "@agent-tool-protocol/server": "npm:*"
     "@mondaydotcomorg/atp-client": "npm:*"
     "@mondaydotcomorg/atp-mcp-adapter": "npm:*"
+    "@mondaydotcomorg/atp-server": "npm:*"
     tsx: "npm:^4.19.2"
   languageName: unknown
   linkType: soft

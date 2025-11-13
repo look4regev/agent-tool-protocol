@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { ChatOpenAI } from '@langchain/openai';
 import { createATPTools, LangGraphATPClient } from '@mondaydotcomorg/atp-langchain';
-import { loadOpenAPI } from '@agent-tool-protocol/server';
+import { loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import type { ClientTool } from '@mondaydotcomorg/atp-protocol';
 import { ToolOperationType } from '@mondaydotcomorg/atp-protocol';
 import { writeFileSync, unlinkSync } from 'fs';

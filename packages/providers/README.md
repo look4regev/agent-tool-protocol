@@ -294,7 +294,7 @@ const attributes = {
 ## Usage in Server
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 import {
 	RedisCache,
 	EnvAuthProvider,

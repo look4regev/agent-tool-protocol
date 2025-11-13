@@ -30,7 +30,7 @@ graph LR
 ### Connect to MCP Server (stdio)
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 
 const server = createServer();

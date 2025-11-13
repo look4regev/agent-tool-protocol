@@ -1,4 +1,4 @@
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MCPConnector } from '@mondaydotcomorg/atp-mcp-adapter';
 

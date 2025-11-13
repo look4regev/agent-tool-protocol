@@ -3,7 +3,7 @@
  * Real-world scenarios from simple to complex
  */
 
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	ProvenanceMode,

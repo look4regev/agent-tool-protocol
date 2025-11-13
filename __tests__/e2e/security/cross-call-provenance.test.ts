@@ -4,9 +4,9 @@
  */
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
-import { ProvenanceMode, createCustomPolicy } from '@agent-tool-protocol/server';
+import { ProvenanceMode, createCustomPolicy } from '@mondaydotcomorg/atp-server';
 import { ProvenanceSource } from '@mondaydotcomorg/atp-provenance';
 import { nanoid } from 'nanoid';
 

@@ -4,7 +4,7 @@
  */
 
 import { createServer as createHTTPServer } from 'node:http';
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const atpServer = createServer();
 

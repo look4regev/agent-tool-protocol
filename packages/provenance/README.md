@@ -238,8 +238,8 @@ cleanupProvenanceForExecution('exec-123');
 ## Integration with ATP Server
 
 ```typescript
-import { createServer, ProvenanceMode } from '@agent-tool-protocol/server';
-import { preventDataExfiltration, requireUserOrigin } from '@agent-tool-protocol/server';
+import { createServer, ProvenanceMode } from '@mondaydotcomorg/atp-server';
+import { preventDataExfiltration, requireUserOrigin } from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {

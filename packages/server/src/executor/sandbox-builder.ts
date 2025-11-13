@@ -34,7 +34,7 @@ import {
 	ProvenanceSource,
 	registerProvenanceMetadata,
 } from '@mondaydotcomorg/atp-provenance';
-import { ReaderPermissions } from '@agent-tool-protocol/server';
+import { ReaderPermissions } from '@mondaydotcomorg/atp-server';
 import { getHintMap, reattachProvenanceFromHints } from '../utils/provenance-reattachment.js';
 import { createASTProvenanceChecker } from './ast-provenance-bridge.js';
 

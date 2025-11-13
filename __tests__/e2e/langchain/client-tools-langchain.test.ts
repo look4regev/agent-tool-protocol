@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from '@jest/globals';
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 import { ApprovalRequiredException, LangGraphATPClient } from '@mondaydotcomorg/atp-langchain';
 import type { ClientTool } from '@mondaydotcomorg/atp-protocol';
 import { ToolOperationType } from '@mondaydotcomorg/atp-protocol';

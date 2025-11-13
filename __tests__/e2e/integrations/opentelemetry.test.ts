@@ -1,5 +1,5 @@
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
 import { ToolOperationType, ToolSensitivityLevel } from '@mondaydotcomorg/atp-protocol';
 import fetch from 'node-fetch';
 import { trace, context as otelContext, SpanStatusCode, metrics } from '@opentelemetry/api';

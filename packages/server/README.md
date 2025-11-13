@@ -1,4 +1,4 @@
-# @agent-tool-protocol/server
+# @mondaydotcomorg/atp-server
 
 Production-ready ATP server with sandboxed execution, API aggregation, semantic search, and state management.
 
@@ -9,7 +9,7 @@ The ATP server provides secure, sandboxed TypeScript execution with built-in run
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/server
+npm install @mondaydotcomorg/atp-server
 ```
 
 ## Architecture
@@ -39,7 +39,7 @@ graph TB
 ### Basic Server
 
 ```typescript
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {
@@ -55,7 +55,7 @@ console.log('ATP server running on http://localhost:3333');
 ### With OpenAPI Integration
 
 ```typescript
-import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 
 const server = createServer();
 
@@ -145,7 +145,7 @@ import {
 	ProvenanceMode,
 	preventDataExfiltration,
 	requireUserOrigin,
-} from '@agent-tool-protocol/server';
+} from '@mondaydotcomorg/atp-server';
 
 const server = createServer({
 	execution: {
@@ -375,7 +375,7 @@ await atp.api.database.createUser({ name: 'Alice' });
 ## Middleware
 
 ```typescript
-import type { Middleware, RequestContext } from '@agent-tool-protocol/server';
+import type { Middleware, RequestContext } from '@mondaydotcomorg/atp-server';
 
 const loggingMiddleware: Middleware = async (context: RequestContext, next) => {
 	console.log(`${context.method} ${context.path}`);

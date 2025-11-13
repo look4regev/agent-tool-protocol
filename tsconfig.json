@@ -30,7 +30,7 @@
 			"@mondaydotcomorg/atp-provenance": ["packages/provenance/src/index.ts"],
 			"@mondaydotcomorg/atp-providers": ["packages/providers/src/index.ts"],
 			"@mondaydotcomorg/atp-runtime": ["packages/runtime/src/index.ts"],
-			"@agent-tool-protocol/server": ["packages/server/src/index.ts"]
+			"@mondaydotcomorg/atp-server": ["packages/server/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]

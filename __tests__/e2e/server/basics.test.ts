@@ -3,7 +3,7 @@
  * Tests basic server creation, configuration, and HTTP endpoints
  */
 
-import { createServer } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
 import { MemoryCache, EnvAuthProvider, JSONLAuditSink } from '@mondaydotcomorg/atp-providers';
 import { tmpdir } from 'os';
 import { join } from 'path';

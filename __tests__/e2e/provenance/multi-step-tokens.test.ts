@@ -4,7 +4,7 @@
  * Tests that provenance tokens persist across executions and policies enforce correctly
  */
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { createServer, ProvenanceMode, createCustomPolicy } from '@agent-tool-protocol/server';
+import { createServer, ProvenanceMode, createCustomPolicy } from '@mondaydotcomorg/atp-server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MemoryCache } from '@mondaydotcomorg/atp-providers';
 import { ProvenanceSource } from '@mondaydotcomorg/atp-provenance';

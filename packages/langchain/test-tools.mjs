@@ -1,6 +1,6 @@
 import { createATPTools } from './dist/langgraph-tools.js';
 import { ChatOpenAI } from '@langchain/openai';
-import { createServer as createATPServer, MB } from '@agent-tool-protocol/server';
+import { createServer as createATPServer, MB } from '@mondaydotcomorg/atp-server';
 
 // Start ATP server
 const atpServer = createATPServer({

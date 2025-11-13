@@ -3,8 +3,8 @@
  * Tests custom CORS, rate limiting, and API key authentication middleware
  */
 
-import { createServer } from '@agent-tool-protocol/server';
-import type { Middleware } from '@agent-tool-protocol/server';
+import { createServer } from '@mondaydotcomorg/atp-server';
+import type { Middleware } from '@mondaydotcomorg/atp-server';
 
 describe('Middleware', () => {
 	let server: any;

@@ -1,4 +1,4 @@
-import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
+import { AgentToolProtocolServer } from '@mondaydotcomorg/atp-server';
 import { ToolOperationType, ToolSensitivityLevel } from '@mondaydotcomorg/atp-protocol';
 import { NodeSDK } from '@opentelemetry/sdk-node';
 import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';

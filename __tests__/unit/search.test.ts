@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { SearchEngine } from '@agent-tool-protocol/server';
+import { SearchEngine } from '@mondaydotcomorg/atp-server';
 import type { APIGroupConfig } from '@mondaydotcomorg/atp-protocol';
 
 describe('Search Engine', () => {

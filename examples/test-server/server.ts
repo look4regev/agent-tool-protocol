@@ -10,7 +10,7 @@ if (!process.env.ATP_JWT_SECRET) {
 	console.log('⚠️  Using default JWT secret "test-key" for development. Set ATP_JWT_SECRET for production.');
 }
 
-import { AgentToolProtocolServer, loadOpenAPI } from '@agent-tool-protocol/server';
+import { AgentToolProtocolServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 
 async function main() {
 	// Create ATP server

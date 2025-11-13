@@ -8,7 +8,7 @@
 		"paths": {
 			"@mondaydotcomorg/atp-protocol": ["packages/protocol/src/index.ts"],
 			"@mondaydotcomorg/atp-provenance": ["packages/provenance/src/index.ts"],
-			"@agent-tool-protocol/server": ["packages/server/src/index.ts"],
+			"@mondaydotcomorg/atp-server": ["packages/server/src/index.ts"],
 			"@mondaydotcomorg/atp-client": ["packages/client/src/index.ts"],
 			"@mondaydotcomorg/atp-runtime": ["packages/runtime/src/index.ts"],
 			"@mondaydotcomorg/atp-mcp-adapter": ["packages/mcp-adapter/src/index.ts"],

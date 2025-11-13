@@ -1,5 +1,5 @@
 import { describe, test, expect, beforeAll } from '@jest/globals';
-import { SandboxExecutor } from '@agent-tool-protocol/server';
+import { SandboxExecutor } from '@mondaydotcomorg/atp-server';
 import { initializeCache, initializeLogger } from '@mondaydotcomorg/atp-runtime';
 import type { ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
 

@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/server",
+	"name": "@mondaydotcomorg/atp-server",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/server/src",
 	"projectType": "library",

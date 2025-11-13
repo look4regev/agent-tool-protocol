@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { ExecutionStatus, CallbackType } from '@mondaydotcomorg/atp-protocol';
-import { loadOpenAPI } from '@agent-tool-protocol/server';
+import { loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { writeFileSync, unlinkSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
