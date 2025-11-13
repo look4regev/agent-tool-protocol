@@ -17,7 +17,7 @@
 import { StateGraph, END, START, Annotation } from '@langchain/langgraph';
 import { MemorySaver } from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
-import { createATPTools, ApprovalRequiredException } from '@agent-tool-protocol/langchain';
+import { createATPTools, ApprovalRequiredException } from '@mondaydotcomorg/atp-langchain';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
 import * as readline from 'readline';
 

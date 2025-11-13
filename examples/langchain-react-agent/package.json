@@ -9,10 +9,10 @@
 		"start:simple": "tsx simple-agent.ts"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/langchain": "workspace:*",
 		"@langchain/core": "^0.3.78",
 		"@langchain/langgraph": "^0.2.0",
 		"@langchain/openai": "^0.3.0",
+		"@mondaydotcomorg/atp-langchain": "workspace:*",
 		"langchain": "^0.3.35",
 		"zod": "^4.1.11"
 	},

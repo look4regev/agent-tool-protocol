@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/langchain",
+	"name": "@mondaydotcomorg/atp-langchain",
 	"version": "0.17.13",
 	"description": "LangChain integration for Agent Tool Protocol",
 	"type": "module",
@@ -31,9 +31,9 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"@agent-tool-protocol/client": "workspace:*",
 		"@agent-tool-protocol/protocol": "workspace:*",
 		"@langchain/core": "^0.3.78",
+		"@mondaydotcomorg/atp-client": "workspace:*",
 		"json-schema-to-zod": "^2.6.1",
 		"langchain": "^0.3.35",
 		"zod": "^4.1.11"

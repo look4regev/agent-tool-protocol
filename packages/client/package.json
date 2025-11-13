@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/client",
+	"name": "@mondaydotcomorg/atp-client",
 	"version": "0.17.13",
 	"description": "Client SDK for Agent Tool Protocol",
 	"type": "module",

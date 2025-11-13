@@ -1,5 +1,5 @@
 import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
 
 process.env.ATP_JWT_SECRET = process.env.ATP_JWT_SECRET || 'test-secret-key';

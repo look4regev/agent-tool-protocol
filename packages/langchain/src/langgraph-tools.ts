@@ -18,7 +18,7 @@ import {
 	createToolsFromATPClient,
 	ToolNames,
 	type Tool as ATPTool,
-} from '@agent-tool-protocol/client';
+} from '@mondaydotcomorg/atp-client';
 import { ExecutionStatus, type ExecutionConfig } from '@agent-tool-protocol/protocol';
 
 /**

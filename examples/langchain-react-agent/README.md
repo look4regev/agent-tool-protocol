@@ -87,7 +87,7 @@ npm install
 The `simple-agent.ts` example shows how to use `preRequest` hooks to automatically refresh short-lived tokens:
 
 ```typescript
-import type { ClientHooks } from '@agent-tool-protocol/client';
+import type { ClientHooks } from '@mondaydotcomorg/atp-client';
 
 const hooks: ClientHooks = {
 	preRequest: async (context) => {

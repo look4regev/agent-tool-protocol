@@ -7,9 +7,9 @@
 		"start": "NODE_OPTIONS='--no-node-snapshot' tsx index.ts"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/client": "*",
 		"@agent-tool-protocol/mcp-adapter": "*",
 		"@agent-tool-protocol/server": "*",
+		"@mondaydotcomorg/atp-client": "*",
 		"tsx": "^4.19.2"
 	}
 }

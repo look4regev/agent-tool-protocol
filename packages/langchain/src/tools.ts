@@ -9,7 +9,7 @@ import {
 	createToolsFromATPClient,
 	type Tool,
 	type ClientHooks,
-} from '@agent-tool-protocol/client';
+} from '@mondaydotcomorg/atp-client';
 import { DynamicTool } from '@langchain/core/tools';
 
 /**

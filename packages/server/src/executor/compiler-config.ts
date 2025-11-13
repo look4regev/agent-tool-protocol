@@ -17,7 +17,7 @@ import {
 	resumablePromiseAll,
 	resumablePromiseAllSettled,
 	batchParallel,
-} from '@agent-tool-protocol/atp-compiler';
+} from '@mondaydotcomorg/atp-compiler';
 import { ATP_COMPILER_ENABLED, ATP_BATCH_SIZE_THRESHOLD } from './constants.js';
 
 const transformCache = new Map<string, string>();

@@ -12,8 +12,8 @@
 
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
-import { createATPTools } from '@agent-tool-protocol/langchain';
-import type { ClientHooks } from '@agent-tool-protocol/client';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
+import type { ClientHooks } from '@mondaydotcomorg/atp-client';
 
 async function main() {
 	console.log('🚀 Simple LangChain React Agent with ATP\n');

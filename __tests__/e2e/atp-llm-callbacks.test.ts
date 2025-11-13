@@ -4,7 +4,7 @@
  */
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
 
 const TEST_PORT = 3345;

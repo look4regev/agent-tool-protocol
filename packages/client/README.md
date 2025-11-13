@@ -1,4 +1,4 @@
-# @agent-tool-protocol/client
+# @mondaydotcomorg/atp-client
 
 Client library for connecting to Agent Tool Protocol servers and executing code.
 
@@ -9,7 +9,7 @@ The ATP client enables agents to connect to ATP servers, execute TypeScript code
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/client
+npm install @mondaydotcomorg/atp-client
 ```
 
 ## Architecture
@@ -35,7 +35,7 @@ graph TB
 ### Basic Client
 
 ```typescript
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 
 const client = new AgentToolProtocolClient({
 	baseUrl: 'http://localhost:3333',
@@ -157,7 +157,7 @@ const result = await client.execute({
 Register custom tools that execute on the client:
 
 ```typescript
-import { createClientTool } from '@agent-tool-protocol/client';
+import { createClientTool } from '@mondaydotcomorg/atp-client';
 
 const fetchTool = createClientTool({
 	name: 'fetch',
@@ -370,7 +370,7 @@ sequenceDiagram
 ## Error Handling
 
 ```typescript
-import { ExecutionStatus } from '@agent-tool-protocol/client';
+import { ExecutionStatus } from '@mondaydotcomorg/atp-client';
 
 try {
 	const result = await client.execute({ code: '...' });

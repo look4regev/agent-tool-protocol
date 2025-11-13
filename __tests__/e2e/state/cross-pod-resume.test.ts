@@ -9,7 +9,7 @@
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { RedisCache, FileCache } from '@agent-tool-protocol/providers';
 import Redis from 'ioredis';
 import path from 'path';

@@ -1,4 +1,4 @@
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { ExecutionStatus } from '@agent-tool-protocol/protocol';
 
 /**

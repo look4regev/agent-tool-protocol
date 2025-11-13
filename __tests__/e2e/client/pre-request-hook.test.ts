@@ -2,8 +2,8 @@
  * Tests for preRequestHook functionality
  */
 
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
-import type { PreRequestContext, PreRequestHook, ClientHooks } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
+import type { PreRequestContext, PreRequestHook, ClientHooks } from '@mondaydotcomorg/atp-client';
 import { createServer } from '@agent-tool-protocol/server';
 import { nanoid } from 'nanoid';
 

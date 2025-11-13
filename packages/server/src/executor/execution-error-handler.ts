@@ -12,7 +12,7 @@ import {
 import {
 	isBatchPauseError,
 	type BatchPauseExecutionError,
-} from '@agent-tool-protocol/atp-compiler';
+} from '@mondaydotcomorg/atp-compiler';
 import { nanoid } from 'nanoid';
 import type { CallbackRecord } from '../execution-state/index.js';
 import type { RuntimeContext } from './types.js';

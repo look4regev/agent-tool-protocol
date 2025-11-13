@@ -7,7 +7,7 @@
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	preventDataExfiltration,
 	preventDataExfiltrationWithApproval,

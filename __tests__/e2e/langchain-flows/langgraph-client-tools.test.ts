@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { ChatOpenAI } from '@langchain/openai';
-import { LangGraphATPClient } from '@agent-tool-protocol/langchain';
+import { LangGraphATPClient } from '@mondaydotcomorg/atp-langchain';
 import type { ClientTool } from '@agent-tool-protocol/protocol';
 import { ExecutionStatus, ToolOperationType } from '@agent-tool-protocol/protocol';
 import {

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { ChatOpenAI } from '@langchain/openai';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 import { loadOpenAPI } from '@agent-tool-protocol/server';
 import type { AuthProvider, CustomFunctionDef } from '@agent-tool-protocol/protocol';
 import { writeFileSync, unlinkSync } from 'fs';

@@ -36,10 +36,10 @@ Traditional function-calling protocols like MCP have limitations:
 
 ```bash
 # Using Yarn (recommended)
-yarn add @agent-tool-protocol/server @agent-tool-protocol/client
+yarn add @agent-tool-protocol/server @mondaydotcomorg/atp-client
 
 # Using npm
-npm install @agent-tool-protocol/server @agent-tool-protocol/client
+npm install @agent-tool-protocol/server @mondaydotcomorg/atp-client
 ```
 > **📝 Note:** The `--no-node-snapshot` flag is required for Node.js 20+
 ## 🎯 Quick Start
@@ -50,7 +50,7 @@ A single script that integrates OpenAPI (Petstore) and MCP (Playwright):
 
 ```typescript
 import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MCPConnector } from '@agent-tool-protocol/mcp-adapter';
 
 process.env.ATP_JWT_SECRET = process.env.ATP_JWT_SECRET || 'test-secret-key';
@@ -122,7 +122,7 @@ Use ATP with LangChain/LangGraph for autonomous agents:
 import { createServer, loadOpenAPI } from '@agent-tool-protocol/server';
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 
 
 async function main() {
@@ -178,7 +178,7 @@ ATP provides powerful LangChain/LangGraph integration with LLM callbacks and app
 
 ```typescript
 import { MemorySaver } from '@langchain/langgraph';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 import { ChatOpenAI } from '@langchain/openai';
 
 const llm = new ChatOpenAI({ modelName: 'gpt-4.1' });

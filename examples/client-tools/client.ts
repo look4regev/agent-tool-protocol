@@ -1,4 +1,4 @@
-import { AgentToolProtocolClient } from '@agent-tool-protocol/client';
+import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import {
 	ToolOperationType,
 	ToolSensitivityLevel,

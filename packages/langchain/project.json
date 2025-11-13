@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/langchain",
+	"name": "@mondaydotcomorg/atp-langchain",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/langchain/src",
 	"projectType": "library",

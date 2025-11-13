@@ -15,7 +15,7 @@
 
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
-import { createATPTools } from '@agent-tool-protocol/langchain';
+import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 
 async function main() {
 	console.log('🧪 ATP + LangChain Integration Test\n');
