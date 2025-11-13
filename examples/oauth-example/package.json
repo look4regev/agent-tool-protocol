@@ -1,6 +1,7 @@
 {
 	"name": "atp-oauth-example",
 	"version": "1.0.0",
+	"private": true,
 	"description": "Complete OAuth flow example with user-scoped credentials for Agent Tool Protocol",
 	"main": "server.ts",
 	"scripts": {
