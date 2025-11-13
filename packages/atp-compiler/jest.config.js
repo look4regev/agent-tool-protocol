@@ -5,7 +5,7 @@ export default {
 	testMatch: ['**/*.test.ts'],
 	moduleNameMapper: {
 		'^(\\.{1,2}/.*)\\.js$': '$1',
-		'^@agent-tool-protocol/runtime$': '<rootDir>/../runtime/src/index.ts',
+		'^@mondaydotcomorg/atp-runtime$': '<rootDir>/../runtime/src/index.ts',
 		'^@mondaydotcomorg/atp-protocol$': '<rootDir>/../protocol/src/index.ts',
 	},
 	extensionsToTreatAsEsm: ['.ts'],

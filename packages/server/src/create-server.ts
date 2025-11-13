@@ -8,8 +8,8 @@ import type {
 	ToolMetadata,
 } from '@mondaydotcomorg/atp-protocol';
 import { ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
-import { log, initializeLogger } from '@agent-tool-protocol/runtime';
-import { shutdownLogger } from '@agent-tool-protocol/runtime';
+import { log, initializeLogger } from '@mondaydotcomorg/atp-runtime';
+import { shutdownLogger } from '@mondaydotcomorg/atp-runtime';
 import type {
 	ServerConfig,
 	Middleware,

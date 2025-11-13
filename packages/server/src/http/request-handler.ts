@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'node:http';
 import { nanoid } from 'nanoid';
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 import type { CacheProvider, AuthProvider, AuditSink } from '@mondaydotcomorg/atp-protocol';
 import { parseBody } from '../core/http.js';
 import { handleError, createContext } from '../utils/index.js';

@@ -4,7 +4,7 @@ import {
 	nextSequenceNumber,
 	getCachedResult,
 	getCallSequenceNumber,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 
 export async function batchParallel<T>(
 	batchCalls: BatchCallInfo[],

@@ -1,7 +1,7 @@
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
-import { initializeCache, initializeLogger } from '@agent-tool-protocol/runtime';
+import { initializeCache, initializeLogger } from '@mondaydotcomorg/atp-runtime';
 
 describe('ATP Server Explorer - Filesystem-like API navigation', () => {
 	let server: AgentToolProtocolServer;

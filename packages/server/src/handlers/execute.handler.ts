@@ -12,7 +12,7 @@ import {
 } from '@mondaydotcomorg/atp-provenance';
 import { emitProvenanceTokens } from '../utils/token-emitter.js';
 import { storeHintMap, clearHintMap } from '../utils/provenance-reattachment.js';
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 
 /**
  * Recursively remove __prov_id__ properties from result

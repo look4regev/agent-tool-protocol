@@ -6,7 +6,7 @@ import {
 	initializeApproval,
 	setCurrentExecutionId,
 	clearCurrentExecutionId,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 
 describe('Runtime - Approval System', () => {
 	beforeEach(() => {

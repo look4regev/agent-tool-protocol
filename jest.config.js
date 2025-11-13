@@ -21,7 +21,7 @@ module.exports = {
 		'^nanoid$': '<rootDir>/__mocks__/nanoid.js',
 		'^zod-to-json-schema$': '<rootDir>/__mocks__/zod-to-json-schema/index.js',
 		'^@mondaydotcomorg/atp-protocol$': '<rootDir>/packages/protocol/src/index.ts',
-		'^@agent-tool-protocol/runtime$': '<rootDir>/packages/runtime/src/index.ts',
+		'^@mondaydotcomorg/atp-runtime$': '<rootDir>/packages/runtime/src/index.ts',
 		'^@mondaydotcomorg/atp-provenance$': '<rootDir>/packages/provenance/src/index.ts',
 		'^@mondaydotcomorg/atp-compiler$': '<rootDir>/packages/atp-compiler/src/index.ts',
 		'^@agent-tool-protocol/server$': '<rootDir>/packages/server/src/index.ts',

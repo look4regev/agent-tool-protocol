@@ -25,7 +25,7 @@ import {
 	pauseForCallback,
 	nextSequenceNumber,
 	getCachedResult,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 import type { RuntimeContext } from './types.js';
 import {
 	createProvenanceProxy,

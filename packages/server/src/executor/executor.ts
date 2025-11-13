@@ -16,7 +16,7 @@ import {
 	setVectorStoreExecutionId,
 	clearVectorStoreExecutionId,
 	initializeApproval,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 import { nanoid } from 'nanoid';
 import type { CallbackRecord } from '../execution-state/index.js';
 import type { ClientSessionManager } from '../client-sessions.js';

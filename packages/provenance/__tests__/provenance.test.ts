@@ -15,7 +15,7 @@ import {
 	requireUserOrigin,
 	blockLLMRecipients,
 } from '@mondaydotcomorg/atp-provenance';
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 
 describe('ProvenanceProxy', () => {
 	it('should wrap values with provenance metadata', () => {

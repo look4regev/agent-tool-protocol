@@ -1,4 +1,4 @@
-import type { Logger } from '@agent-tool-protocol/runtime';
+import type { Logger } from '@mondaydotcomorg/atp-runtime';
 import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import {
 	ATPCompiler,

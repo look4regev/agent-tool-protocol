@@ -305,9 +305,9 @@ describe('Validation and Security E2E', () => {
 			await validationServer?.stop();
 		});
 
-		it('should block ALL imports including @agent-tool-protocol/runtime', async () => {
+		it('should block ALL imports including @mondaydotcomorg/atp-runtime', async () => {
 			const code = `
-				import { atp } from '@agent-tool-protocol/runtime';
+				import { atp } from '@mondaydotcomorg/atp-runtime';
 				return { ok: true };
 			`;
 

@@ -1,14 +1,14 @@
 import ivm from 'isolated-vm';
 import { ExecutionStatus } from '@mondaydotcomorg/atp-protocol';
 import type { ExecutionResult } from '@mondaydotcomorg/atp-protocol';
-import type { Logger } from '@agent-tool-protocol/runtime';
+import type { Logger } from '@mondaydotcomorg/atp-runtime';
 import {
 	isPauseError,
 	getCallSequenceNumber,
 	setPauseForClient,
 	setReplayMode,
 	type PauseExecutionError,
-} from '@agent-tool-protocol/runtime';
+} from '@mondaydotcomorg/atp-runtime';
 import {
 	isBatchPauseError,
 	type BatchPauseExecutionError,

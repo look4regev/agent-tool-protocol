@@ -8,7 +8,7 @@ import type { AuditConfig } from '../middleware/audit.js';
 import { auditExecution } from '../middleware/audit.js';
 import { clientCallbackManager } from '../callback/index.js';
 import { nanoid } from 'nanoid';
-import type { log } from '@agent-tool-protocol/runtime';
+import type { log } from '@mondaydotcomorg/atp-runtime';
 
 interface ExecuteContext {
 	validator: CodeValidator;

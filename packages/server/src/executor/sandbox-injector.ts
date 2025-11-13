@@ -1,6 +1,6 @@
 import ivm from 'isolated-vm';
-import type { Logger } from '@agent-tool-protocol/runtime';
-import { isPauseError, runInExecutionContext } from '@agent-tool-protocol/runtime';
+import type { Logger } from '@mondaydotcomorg/atp-runtime';
+import { isPauseError, runInExecutionContext } from '@mondaydotcomorg/atp-runtime';
 import { isBatchPauseError } from '@mondaydotcomorg/atp-compiler';
 import { PAUSE_EXECUTION_MARKER } from './constants.js';
 

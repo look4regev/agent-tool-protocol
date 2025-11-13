@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/runtime",
+	"name": "@mondaydotcomorg/atp-runtime",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/runtime/src",
 	"projectType": "library",

@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import type { log } from '@agent-tool-protocol/runtime';
+import type { log } from '@mondaydotcomorg/atp-runtime';
 import { handleInfo } from '../controllers/info.controller.js';
 import { handleDefinitions } from '../controllers/definitions.controller.js';
 import { handleSearch } from '../controllers/search.controller.js';

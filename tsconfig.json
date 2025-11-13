@@ -29,7 +29,7 @@
 			"@mondaydotcomorg/atp-protocol": ["packages/protocol/src/index.ts"],
 			"@mondaydotcomorg/atp-provenance": ["packages/provenance/src/index.ts"],
 			"@mondaydotcomorg/atp-providers": ["packages/providers/src/index.ts"],
-			"@agent-tool-protocol/runtime": ["packages/runtime/src/index.ts"],
+			"@mondaydotcomorg/atp-runtime": ["packages/runtime/src/index.ts"],
 			"@agent-tool-protocol/server": ["packages/server/src/index.ts"]
 		}
 	},

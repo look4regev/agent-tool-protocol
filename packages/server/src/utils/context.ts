@@ -1,6 +1,6 @@
 import { IncomingMessage } from 'node:http';
 import type { CacheProvider, AuthProvider, AuditSink } from '@mondaydotcomorg/atp-protocol';
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 import type { RequestContext } from '../core/config.js';
 import { parseQuery } from '../core/http.js';
 

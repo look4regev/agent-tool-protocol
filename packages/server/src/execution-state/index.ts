@@ -1,4 +1,4 @@
-import { log } from '@agent-tool-protocol/runtime';
+import { log } from '@mondaydotcomorg/atp-runtime';
 import type { ExecutionConfig, CallbackType, CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import type { ProvenanceState, ProvenanceSnapshot } from '@mondaydotcomorg/atp-provenance';
 

@@ -5,7 +5,7 @@ import {
 	ProvenanceMode as PM,
 } from '@mondaydotcomorg/atp-provenance';
 import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
-import type { log } from '@agent-tool-protocol/runtime';
+import type { log } from '@mondaydotcomorg/atp-runtime';
 
 type Logger = ReturnType<typeof log.child>;
 

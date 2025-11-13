@@ -3,7 +3,7 @@
  *
  * Generates TypeScript definitions from the runtime API registry.
  */
-import { GENERATED_METADATA, generateRuntimeTypes as generate } from '@agent-tool-protocol/runtime';
+import { GENERATED_METADATA, generateRuntimeTypes as generate } from '@mondaydotcomorg/atp-runtime';
 
 /**
  * Generates TypeScript definitions for the runtime SDK

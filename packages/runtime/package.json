@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/runtime",
+	"name": "@mondaydotcomorg/atp-runtime",
 	"version": "0.17.13",
 	"description": "Runtime SDK injected into sandbox for Agent Tool Protocol",
 	"type": "module",
