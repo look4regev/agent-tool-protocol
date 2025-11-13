@@ -44,7 +44,7 @@ graph TB
 
 ```typescript
 import { ATPCompiler, initializeRuntime } from '@mondaydotcomorg/atp-compiler';
-import { cacheProvider } from '@agent-tool-protocol/protocol';
+import { cacheProvider } from '@mondaydotcomorg/atp-protocol';
 
 // Initialize runtime
 initializeRuntime({

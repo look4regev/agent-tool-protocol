@@ -1,5 +1,5 @@
 import type { Node } from '@babel/types';
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 
 export interface DetectionResult {
 	needsTransform: boolean;

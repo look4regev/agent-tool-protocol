@@ -1,5 +1,5 @@
-import type { ValidationResult, ExecutionConfig } from '@agent-tool-protocol/protocol';
-import { sanitizeInput, MAX_CODE_SIZE } from '@agent-tool-protocol/protocol';
+import type { ValidationResult, ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
+import { sanitizeInput, MAX_CODE_SIZE } from '@mondaydotcomorg/atp-protocol';
 import * as acorn from 'acorn';
 
 interface ValidationError {

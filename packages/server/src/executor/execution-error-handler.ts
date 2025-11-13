@@ -1,6 +1,6 @@
 import ivm from 'isolated-vm';
-import { ExecutionStatus } from '@agent-tool-protocol/protocol';
-import type { ExecutionResult } from '@agent-tool-protocol/protocol';
+import { ExecutionStatus } from '@mondaydotcomorg/atp-protocol';
+import type { ExecutionResult } from '@mondaydotcomorg/atp-protocol';
 import type { Logger } from '@agent-tool-protocol/runtime';
 import {
 	isPauseError,

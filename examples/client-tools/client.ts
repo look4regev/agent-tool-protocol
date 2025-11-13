@@ -3,7 +3,7 @@ import {
 	ToolOperationType,
 	ToolSensitivityLevel,
 	type ClientTool,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import * as fs from 'fs/promises';
 import * as os from 'os';
 import * as path from 'path';

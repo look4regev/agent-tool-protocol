@@ -1,4 +1,4 @@
-import { ExecutionStatus, ExecutionErrorCode } from '@agent-tool-protocol/protocol';
+import { ExecutionStatus, ExecutionErrorCode } from '@mondaydotcomorg/atp-protocol';
 
 export interface ErrorCategory {
 	status: ExecutionStatus;

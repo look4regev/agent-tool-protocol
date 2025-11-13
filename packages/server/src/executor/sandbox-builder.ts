@@ -3,14 +3,14 @@ import type {
 	APIGroupConfig,
 	ClientToolDefinition,
 	ToolMetadata,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import {
 	ToolOperationType,
 	ToolSensitivityLevel,
 	ProvenanceMode,
 	CallbackType,
 	ToolOperation,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import {
 	llm,
 	cache,

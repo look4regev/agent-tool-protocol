@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from '@jest/globals';
 import { createServer } from '@agent-tool-protocol/server';
 import { ApprovalRequiredException, LangGraphATPClient } from '@mondaydotcomorg/atp-langchain';
-import type { ClientTool } from '@agent-tool-protocol/protocol';
-import { ToolOperationType } from '@agent-tool-protocol/protocol';
+import type { ClientTool } from '@mondaydotcomorg/atp-protocol';
+import { ToolOperationType } from '@mondaydotcomorg/atp-protocol';
 import { ChatOpenAI } from '@langchain/openai';
 
 const PORT = 3528;

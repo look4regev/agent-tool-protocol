@@ -5,7 +5,7 @@
 
 import { describe, test, expect } from '@jest/globals';
 import { APIAggregator } from '../../packages/server/src/aggregator/index';
-import type { APIGroupConfig } from '@agent-tool-protocol/protocol';
+import type { APIGroupConfig } from '@mondaydotcomorg/atp-protocol';
 
 describe('APIAggregator - Optional Field Generation', () => {
 	test('should generate TypeScript with optional field markers', async () => {

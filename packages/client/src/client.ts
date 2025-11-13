@@ -5,8 +5,8 @@ import type {
 	SearchResult,
 	ClientTool,
 	ExploreResult,
-} from '@agent-tool-protocol/protocol';
-import { CallbackType } from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
+import { CallbackType } from '@mondaydotcomorg/atp-protocol';
 import {
 	type ClientLLMHandler,
 	type ClientApprovalHandler,

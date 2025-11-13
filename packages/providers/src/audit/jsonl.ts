@@ -1,4 +1,4 @@
-import type { AuditEvent, AuditFilter, AuditSink } from '@agent-tool-protocol/protocol';
+import type { AuditEvent, AuditFilter, AuditSink } from '@mondaydotcomorg/atp-protocol';
 import { appendFile, readFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname } from 'node:path';

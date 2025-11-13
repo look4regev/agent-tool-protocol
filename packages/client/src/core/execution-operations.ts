@@ -1,5 +1,5 @@
-import type { ExecutionResult, ExecutionConfig } from '@agent-tool-protocol/protocol';
-import { ExecutionStatus } from '@agent-tool-protocol/protocol';
+import type { ExecutionResult, ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus } from '@mondaydotcomorg/atp-protocol';
 import type { ClientSession } from './session.js';
 import type { ServiceProviders } from './service-providers';
 import { ClientCallbackError } from '../errors.js';

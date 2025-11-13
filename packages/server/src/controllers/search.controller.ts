@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import type { SearchOptions } from '@agent-tool-protocol/protocol';
+import type { SearchOptions } from '@mondaydotcomorg/atp-protocol';
 import type { SearchEngine } from '../search/index.js';
 import { sendJson } from '../utils/response.js';
 

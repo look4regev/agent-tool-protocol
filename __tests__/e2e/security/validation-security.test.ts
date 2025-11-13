@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { createServer, type AgentToolProtocolServer } from '@agent-tool-protocol/server';
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 
 describe('Validation and Security E2E', () => {

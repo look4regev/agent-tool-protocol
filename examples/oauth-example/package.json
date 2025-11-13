@@ -9,9 +9,9 @@
 		"start": "tsx server.ts"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*",
 		"@agent-tool-protocol/providers": "workspace:*",
 		"@agent-tool-protocol/server": "workspace:*",
+		"@mondaydotcomorg/atp-protocol": "workspace:*",
 		"express": "^4.18.2"
 	},
 	"devDependencies": {

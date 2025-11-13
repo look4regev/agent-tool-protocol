@@ -5,7 +5,7 @@ import type {
 	AuthProvider,
 	UserCredentialData,
 	ScopeFilteringConfig,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 
 // Mock AuthProvider for testing
 class MockAuthProvider implements AuthProvider {

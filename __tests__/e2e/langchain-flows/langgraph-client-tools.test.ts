@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { ChatOpenAI } from '@langchain/openai';
 import { LangGraphATPClient } from '@mondaydotcomorg/atp-langchain';
-import type { ClientTool } from '@agent-tool-protocol/protocol';
-import { ExecutionStatus, ToolOperationType } from '@agent-tool-protocol/protocol';
+import type { ClientTool } from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus, ToolOperationType } from '@mondaydotcomorg/atp-protocol';
 import {
 	createTestATPServer,
 	createCleanupTracker,

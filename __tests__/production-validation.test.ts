@@ -9,7 +9,7 @@ import {
 	ProvenanceMode,
 	ToolOperationType,
 	ToolSensitivityLevel,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import { preventDataExfiltration, requireUserOrigin } from '@agent-tool-protocol/provenance';
 
 describe('Production Validation - Real World Scenarios', () => {

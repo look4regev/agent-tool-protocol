@@ -1,5 +1,5 @@
 import type { Logger } from '@agent-tool-protocol/runtime';
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import {
 	ATPCompiler,
 	initializeRuntime as initializeCompilerRuntime,

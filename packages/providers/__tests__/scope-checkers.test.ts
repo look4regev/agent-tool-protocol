@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ScopeCheckerRegistry } from '../src/oauth/scope-checkers.js';
-import type { ScopeChecker } from '@agent-tool-protocol/protocol';
+import type { ScopeChecker } from '@mondaydotcomorg/atp-protocol';
 
 // Mock implementations for testing
 class MockGitHubScopeChecker implements ScopeChecker {

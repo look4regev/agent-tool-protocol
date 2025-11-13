@@ -1,4 +1,4 @@
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
 import { log } from '@agent-tool-protocol/runtime';
 
 export interface AuditConfig {

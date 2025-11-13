@@ -31,9 +31,9 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*",
 		"@langchain/core": "^0.3.78",
 		"@mondaydotcomorg/atp-client": "workspace:*",
+		"@mondaydotcomorg/atp-protocol": "workspace:*",
 		"json-schema-to-zod": "^2.6.1",
 		"langchain": "^0.3.35",
 		"zod": "^4.1.11"

@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { ChatOpenAI } from '@langchain/openai';
 import { createATPTools } from '@mondaydotcomorg/atp-langchain';
 import { loadOpenAPI } from '@agent-tool-protocol/server';
-import type { AuthProvider } from '@agent-tool-protocol/protocol';
+import type { AuthProvider } from '@mondaydotcomorg/atp-protocol';
 import { writeFileSync, unlinkSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';

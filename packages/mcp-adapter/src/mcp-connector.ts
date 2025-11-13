@@ -1,6 +1,6 @@
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
-import type { APIGroupConfig, CustomFunctionDef } from '@agent-tool-protocol/protocol';
+import type { APIGroupConfig, CustomFunctionDef } from '@mondaydotcomorg/atp-protocol';
 
 interface MCPServerConfig {
 	name: string;

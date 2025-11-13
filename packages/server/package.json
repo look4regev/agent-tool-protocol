@@ -32,7 +32,6 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*",
 		"@agent-tool-protocol/provenance": "workspace:*",
 		"@agent-tool-protocol/runtime": "workspace:*",
 		"@babel/generator": "^7.26.0",
@@ -40,6 +39,7 @@
 		"@babel/traverse": "^7.26.0",
 		"@babel/types": "^7.26.0",
 		"@mondaydotcomorg/atp-compiler": "workspace:*",
+		"@mondaydotcomorg/atp-protocol": "workspace:*",
 		"@opentelemetry/api": "^1.9.0",
 		"@opentelemetry/auto-instrumentations-node": "^0.66.0",
 		"@opentelemetry/core": "^2.2.0",

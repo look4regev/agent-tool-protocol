@@ -184,7 +184,7 @@ const tokens = await oauth.handleCallback('code', { state: 'state' });
 ### Custom OAuth Provider
 
 ```typescript
-import type { OAuthProvider } from '@agent-tool-protocol/protocol';
+import type { OAuthProvider } from '@mondaydotcomorg/atp-protocol';
 
 class SlackOAuthProvider implements OAuthProvider {
   name = 'slack';

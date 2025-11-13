@@ -9,9 +9,9 @@
 		"client": "tsx client.ts"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*",
 		"@agent-tool-protocol/server": "workspace:*",
-		"@mondaydotcomorg/atp-client": "workspace:*"
+		"@mondaydotcomorg/atp-client": "workspace:*",
+		"@mondaydotcomorg/atp-protocol": "workspace:*"
 	},
 	"devDependencies": {
 		"tsx": "^4.7.0",

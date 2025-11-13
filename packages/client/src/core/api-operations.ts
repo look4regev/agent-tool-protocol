@@ -1,4 +1,4 @@
-import type { SearchOptions, SearchResult, ExploreResult } from '@agent-tool-protocol/protocol';
+import type { SearchOptions, SearchResult, ExploreResult } from '@mondaydotcomorg/atp-protocol';
 import type { ClientSession } from './session.js';
 
 export class APIOperations {

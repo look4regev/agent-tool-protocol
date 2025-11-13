@@ -387,7 +387,7 @@ The example includes built-in scope checkers for:
 ### Adding Custom Providers
 
 ```typescript
-import { ScopeChecker } from '@agent-tool-protocol/protocol';
+import { ScopeChecker } from '@mondaydotcomorg/atp-protocol';
 
 class CustomProviderScopeChecker implements ScopeChecker {
 	provider = 'custom-api';

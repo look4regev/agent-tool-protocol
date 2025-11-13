@@ -1,4 +1,4 @@
-import type { APIGroupConfig, CustomFunctionDef } from '@agent-tool-protocol/protocol';
+import type { APIGroupConfig, CustomFunctionDef } from '@mondaydotcomorg/atp-protocol';
 import { generateRuntimeTypes } from '../utils/runtime-types.js';
 
 /**

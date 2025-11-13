@@ -7,9 +7,9 @@
 		"jaeger": "docker run -d --name jaeger -e COLLECTOR_OTLP_ENABLED=true -p 16686:16686 -p 4318:4318 jaegertracing/all-in-one:latest"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*",
 		"@agent-tool-protocol/providers": "workspace:*",
 		"@agent-tool-protocol/server": "workspace:*",
+		"@mondaydotcomorg/atp-protocol": "workspace:*",
 		"@opentelemetry/api": "^1.9.0",
 		"@opentelemetry/auto-instrumentations-node": "^0.53.0",
 		"@opentelemetry/core": "^1.29.0",

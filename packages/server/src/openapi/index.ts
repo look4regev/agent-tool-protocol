@@ -2,14 +2,14 @@ import type {
 	APIGroupConfig,
 	CustomFunctionDef,
 	ToolOperationType,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import type {
 	AuthConfig,
 	APIKeyAuthConfig,
 	BearerAuthConfig,
 	BasicAuthConfig,
 	OAuth2AuthConfig,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import { readFile } from 'node:fs/promises';
 
 interface OpenAPISpec {

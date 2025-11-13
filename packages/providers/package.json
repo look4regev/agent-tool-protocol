@@ -18,7 +18,7 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@agent-tool-protocol/protocol": "workspace:*"
+		"@mondaydotcomorg/atp-protocol": "workspace:*"
 	},
 	"devDependencies": {
 		"typescript": "^5.7.2"

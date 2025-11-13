@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { zodToJsonSchema } from 'zod-to-json-schema';
-import { ExecutionStatus } from '@agent-tool-protocol/protocol';
+import { ExecutionStatus } from '@mondaydotcomorg/atp-protocol';
 import type { AgentToolProtocolClient } from '../client.js';
 import { ToolNames, type Tool } from './types';
 

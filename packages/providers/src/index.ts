@@ -29,4 +29,4 @@ export type {
 	AuditEvent,
 	AuditFilter,
 	UserCredentialData,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';

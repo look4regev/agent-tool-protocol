@@ -1,4 +1,4 @@
-import type { CacheProvider } from '@agent-tool-protocol/protocol';
+import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 
 export interface RuntimeContext {
 	llmCallCount: number;

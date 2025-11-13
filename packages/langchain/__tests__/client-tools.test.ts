@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { LangGraphATPClient } from '../src/langgraph-client.js';
 import { createServer } from '@agent-tool-protocol/server';
 import { ChatOpenAI } from '@langchain/openai';
-import { ToolOperationType, type ClientTool, ExecutionStatus } from '@agent-tool-protocol/protocol';
+import { ToolOperationType, type ClientTool, ExecutionStatus } from '@mondaydotcomorg/atp-protocol';
 
 /**
  * Tests for client tools integration with LangChain/LangGraph

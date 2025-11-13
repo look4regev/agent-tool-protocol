@@ -19,7 +19,7 @@ import {
 	ToolNames,
 	type Tool as ATPTool,
 } from '@mondaydotcomorg/atp-client';
-import { ExecutionStatus, type ExecutionConfig } from '@agent-tool-protocol/protocol';
+import { ExecutionStatus, type ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
 
 /**
  * Options for creating ATP tools with LangGraph integration

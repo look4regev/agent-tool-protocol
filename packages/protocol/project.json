@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/protocol",
+	"name": "@mondaydotcomorg/atp-protocol",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/protocol/src",
 	"projectType": "library",

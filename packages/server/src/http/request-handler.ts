@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from 'node:http';
 import { nanoid } from 'nanoid';
 import { log } from '@agent-tool-protocol/runtime';
-import type { CacheProvider, AuthProvider, AuditSink } from '@agent-tool-protocol/protocol';
+import type { CacheProvider, AuthProvider, AuditSink } from '@mondaydotcomorg/atp-protocol';
 import { parseBody } from '../core/http.js';
 import { handleError, createContext } from '../utils/index.js';
 import type { RequestContext, Middleware } from '../core/config.js';

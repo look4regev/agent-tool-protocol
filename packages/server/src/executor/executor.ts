@@ -4,8 +4,8 @@ import type {
 	ExecutionResult,
 	APIGroupConfig,
 	ClientToolDefinition,
-} from '@agent-tool-protocol/protocol';
-import { ExecutionStatus, ProvenanceMode } from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus, ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import {
 	log,
 	setPauseForClient,

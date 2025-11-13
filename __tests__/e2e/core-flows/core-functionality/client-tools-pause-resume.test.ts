@@ -4,8 +4,8 @@ import {
 	ExecutionStatus,
 	ToolOperationType,
 	ToolSensitivityLevel,
-} from '@agent-tool-protocol/protocol';
-import type { ClientTool } from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
+import type { ClientTool } from '@mondaydotcomorg/atp-protocol';
 import {
 	createTestATPServer,
 	createCleanupTracker,

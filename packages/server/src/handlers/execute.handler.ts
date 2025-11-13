@@ -2,8 +2,8 @@ import type { RequestContext, ResolvedServerConfig } from '../core/config.js';
 import type { SandboxExecutor } from '../executor/index.js';
 import type { ExecutionStateManager } from '../execution-state/index.js';
 import type { ClientSessionManager } from '../client-sessions.js';
-import type { AuditSink, AuditEvent } from '@agent-tool-protocol/protocol';
-import { ExecutionStatus, ProvenanceMode } from '@agent-tool-protocol/protocol';
+import type { AuditSink, AuditEvent } from '@mondaydotcomorg/atp-protocol';
+import { ExecutionStatus, ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import { nanoid } from 'nanoid';
 import {
 	captureProvenanceSnapshot,

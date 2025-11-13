@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
-import { ExecutionStatus, ToolOperationType } from '@agent-tool-protocol/protocol';
+import { ExecutionStatus, ToolOperationType } from '@mondaydotcomorg/atp-protocol';
 import { createServer, Server, IncomingMessage, ServerResponse } from 'http';
 import {
 	createTestATPServer,

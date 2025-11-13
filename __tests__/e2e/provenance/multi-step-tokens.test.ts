@@ -8,7 +8,7 @@ import { createServer, ProvenanceMode, createCustomPolicy } from '@agent-tool-pr
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MemoryCache } from '@agent-tool-protocol/providers';
 import { ProvenanceSource } from '@agent-tool-protocol/provenance';
-import { ExecutionResult } from '@agent-tool-protocol/protocol';
+import { ExecutionResult } from '@mondaydotcomorg/atp-protocol';
 
 describe('Multi-Step Provenance Tokens E2E', () => {
 	let server: any;

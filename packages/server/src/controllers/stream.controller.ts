@@ -1,11 +1,11 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import type { ExecutionConfig } from '@agent-tool-protocol/protocol';
+import type { ExecutionConfig } from '@mondaydotcomorg/atp-protocol';
 import {
 	ExecutionErrorCode,
 	validateExecutionConfig,
 	sanitizeInput,
 	MAX_CODE_SIZE,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import type { CodeValidator } from '../validator/index.js';
 import type { SandboxExecutor } from '../executor/index.js';
 import type { ExecutionStateManager } from '../execution-state/index.js';

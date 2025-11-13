@@ -6,7 +6,7 @@
 		"composite": true,
 		"baseUrl": "../..",
 		"paths": {
-			"@agent-tool-protocol/protocol": ["packages/protocol/src/index.ts"],
+			"@mondaydotcomorg/atp-protocol": ["packages/protocol/src/index.ts"],
 			"@agent-tool-protocol/provenance": ["packages/provenance/src/index.ts"],
 			"@agent-tool-protocol/server": ["packages/server/src/index.ts"],
 			"@mondaydotcomorg/atp-client": ["packages/client/src/index.ts"],

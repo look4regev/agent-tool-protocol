@@ -3,7 +3,7 @@ import type { SandboxExecutor } from '../executor/index.js';
 import type { ExecutionStateManager } from '../execution-state/index.js';
 import type { ClientSessionManager } from '../client-sessions.js';
 import { log } from '@agent-tool-protocol/runtime';
-import { ExecutionStatus, ProvenanceMode } from '@agent-tool-protocol/protocol';
+import { ExecutionStatus, ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import {
 	restoreProvenanceSnapshot,
 	captureProvenanceSnapshot,

@@ -20,7 +20,7 @@ module.exports = {
 	moduleNameMapper: {
 		'^nanoid$': '<rootDir>/__mocks__/nanoid.js',
 		'^zod-to-json-schema$': '<rootDir>/__mocks__/zod-to-json-schema/index.js',
-		'^@agent-tool-protocol/protocol$': '<rootDir>/packages/protocol/src/index.ts',
+		'^@mondaydotcomorg/atp-protocol$': '<rootDir>/packages/protocol/src/index.ts',
 		'^@agent-tool-protocol/runtime$': '<rootDir>/packages/runtime/src/index.ts',
 		'^@agent-tool-protocol/provenance$': '<rootDir>/packages/provenance/src/index.ts',
 		'^@mondaydotcomorg/atp-compiler$': '<rootDir>/packages/atp-compiler/src/index.ts',

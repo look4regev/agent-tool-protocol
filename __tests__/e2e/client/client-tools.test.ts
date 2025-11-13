@@ -6,7 +6,7 @@ import {
 	ToolSensitivityLevel,
 	type ClientTool,
 	ExecutionStatus,
-} from '@agent-tool-protocol/protocol';
+} from '@mondaydotcomorg/atp-protocol';
 import type { Server } from 'http';
 
 /**
