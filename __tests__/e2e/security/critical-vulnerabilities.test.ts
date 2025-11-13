@@ -7,8 +7,8 @@
 
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
-import { ProvenanceMode } from '@agent-tool-protocol/provenance';
-import { getClientSecret } from '@agent-tool-protocol/provenance';
+import { ProvenanceMode } from '@mondaydotcomorg/atp-provenance';
+import { getClientSecret } from '@mondaydotcomorg/atp-provenance';
 import {
 	createTestATPServer,
 	createCleanupTracker,

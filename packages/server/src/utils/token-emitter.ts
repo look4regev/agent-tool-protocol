@@ -3,7 +3,7 @@ import {
 	type ProvenanceMetadata,
 	type ProvenanceMode,
 	ProvenanceMode as PM,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import type { CacheProvider } from '@mondaydotcomorg/atp-protocol';
 import type { log } from '@agent-tool-protocol/runtime';
 

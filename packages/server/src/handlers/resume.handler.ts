@@ -13,7 +13,7 @@ import {
 	type ProvenanceSnapshot,
 	type ProvenanceState,
 	type SourceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import { nanoid } from 'nanoid';
 
 /**

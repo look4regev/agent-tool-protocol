@@ -16,7 +16,7 @@ import {
 	computeDigest,
 	ProvenanceSource,
 	type ProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 
 describe('Provenance Re-attachment - Unit Tests', () => {
 	const executionId = 'test-exec-123';

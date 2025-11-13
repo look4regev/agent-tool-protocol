@@ -1,1 +1,1 @@
-export * from '@agent-tool-protocol/provenance';
+export * from '@mondaydotcomorg/atp-provenance';

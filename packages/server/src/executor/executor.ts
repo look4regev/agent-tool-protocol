@@ -45,7 +45,7 @@ import {
 	restoreProvenanceState,
 	captureProvenanceSnapshot,
 	registerProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import {
 	registerIsolateContext,
 	unregisterIsolateContext,

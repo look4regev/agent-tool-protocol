@@ -1,4 +1,4 @@
-# @agent-tool-protocol/provenance
+# @mondaydotcomorg/atp-provenance
 
 CAMEL-inspired provenance security for LLM applications - track data origin and enforce security policies to defend against prompt injection attacks.
 
@@ -9,7 +9,7 @@ This package implements provenance tracking and security policy enforcement insp
 ## Installation
 
 ```bash
-npm install @agent-tool-protocol/provenance
+npm install @mondaydotcomorg/atp-provenance
 ```
 
 ## Architecture
@@ -51,7 +51,7 @@ const user = { name: 'Alice', ssn: '123-45-6789' };
 Runtime tracking with 5-10% overhead using JavaScript Proxies.
 
 ```typescript
-import { createProvenanceProxy, ProvenanceSource } from '@agent-tool-protocol/provenance';
+import { createProvenanceProxy, ProvenanceSource } from '@mondaydotcomorg/atp-provenance';
 
 const user = createProvenanceProxy(
 	{ name: 'Alice', ssn: '123-45-6789' },
@@ -76,7 +76,7 @@ console.log(user.name); // Proxy tracks access
 Compile-time instrumentation with 20-30% overhead, tracks primitive tainting.
 
 ```typescript
-import { instrumentCode, createTrackingRuntime } from '@agent-tool-protocol/provenance';
+import { instrumentCode, createTrackingRuntime } from '@mondaydotcomorg/atp-provenance';
 
 const { code } = instrumentCode(`
   const user = await api.users.getUser({ id: '123' });
@@ -97,7 +97,7 @@ import {
 	SecurityPolicyEngine,
 	preventDataExfiltration,
 	requireUserOrigin,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 
 const policyEngine = new SecurityPolicyEngine(
 	[preventDataExfiltration, requireUserOrigin],
@@ -128,13 +128,13 @@ import {
 	auditSensitiveAccess, // Log all sensitive access
 	getBuiltInPolicies, // All block policies
 	getBuiltInPoliciesWithApproval, // All approval policies
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 ```
 
 ### Custom Policies
 
 ```typescript
-import { createCustomPolicy, type SecurityPolicy } from '@agent-tool-protocol/provenance';
+import { createCustomPolicy, type SecurityPolicy } from '@mondaydotcomorg/atp-provenance';
 
 const blockExternalAPIs: SecurityPolicy = createCustomPolicy({
 	name: 'blockExternalAPIs',
@@ -179,7 +179,7 @@ interface PolicyResult {
 ### Track Data Sources
 
 ```typescript
-import { ProvenanceSource } from '@agent-tool-protocol/provenance';
+import { ProvenanceSource } from '@mondaydotcomorg/atp-provenance';
 
 enum ProvenanceSource {
 	USER = 0, // User-provided data
@@ -198,7 +198,7 @@ interface ProvenanceMetadata {
 ### Get Provenance
 
 ```typescript
-import { getProvenance, hasProvenance } from '@agent-tool-protocol/provenance';
+import { getProvenance, hasProvenance } from '@mondaydotcomorg/atp-provenance';
 
 const user = createProvenanceProxy(userData, source, readers);
 
@@ -220,7 +220,7 @@ import {
 	restoreProvenanceState,
 	setProvenanceExecutionId,
 	cleanupProvenanceForExecution,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 
 // Before execution
 setProvenanceExecutionId('exec-123');
@@ -316,7 +316,7 @@ await engine.checkTool('send', 'email', {
 ### Approval Workflows
 
 ```typescript
-import { preventDataExfiltrationWithApproval } from '@agent-tool-protocol/provenance';
+import { preventDataExfiltrationWithApproval } from '@mondaydotcomorg/atp-provenance';
 
 const engine = new SecurityPolicyEngine([preventDataExfiltrationWithApproval], console);
 
@@ -352,7 +352,7 @@ import {
 	markPrimitiveTainted,
 	isPrimitiveTainted,
 	getProvenanceForPrimitive,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 
 // Mark primitive as tainted
 markPrimitiveTainted('sensitive-string', metadata);

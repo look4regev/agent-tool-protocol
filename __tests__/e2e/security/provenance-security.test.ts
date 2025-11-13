@@ -18,7 +18,7 @@ import {
 } from '@agent-tool-protocol/server';
 import { nanoid } from 'nanoid';
 import { ToolOperationType, ToolSensitivityLevel } from '@mondaydotcomorg/atp-protocol';
-import { ProvenanceMode } from '@agent-tool-protocol/provenance';
+import { ProvenanceMode } from '@mondaydotcomorg/atp-provenance';
 
 const TEST_PORT = 3902;
 const TEST_API_KEY = `test-key-${nanoid()}`;

@@ -10,7 +10,7 @@ import {
 	ToolOperationType,
 	ToolSensitivityLevel,
 } from '@mondaydotcomorg/atp-protocol';
-import { preventDataExfiltration, requireUserOrigin } from '@agent-tool-protocol/provenance';
+import { preventDataExfiltration, requireUserOrigin } from '@mondaydotcomorg/atp-provenance';
 
 describe('Production Validation - Real World Scenarios', () => {
 	let server: AgentToolProtocolServer;

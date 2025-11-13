@@ -1,5 +1,5 @@
 {
-	"name": "@agent-tool-protocol/provenance",
+	"name": "@mondaydotcomorg/atp-provenance",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/provenance/src",
 	"projectType": "library",

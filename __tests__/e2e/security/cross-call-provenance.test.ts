@@ -7,7 +7,7 @@ import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { AgentToolProtocolServer } from '@agent-tool-protocol/server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { ProvenanceMode, createCustomPolicy } from '@agent-tool-protocol/server';
-import { ProvenanceSource } from '@agent-tool-protocol/provenance';
+import { ProvenanceSource } from '@mondaydotcomorg/atp-provenance';
 import { nanoid } from 'nanoid';
 
 const TEST_PORT = 3891;

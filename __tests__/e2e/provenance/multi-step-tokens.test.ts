@@ -7,7 +7,7 @@ import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { createServer, ProvenanceMode, createCustomPolicy } from '@agent-tool-protocol/server';
 import { AgentToolProtocolClient } from '@mondaydotcomorg/atp-client';
 import { MemoryCache } from '@agent-tool-protocol/providers';
-import { ProvenanceSource } from '@agent-tool-protocol/provenance';
+import { ProvenanceSource } from '@mondaydotcomorg/atp-provenance';
 import { ExecutionResult } from '@mondaydotcomorg/atp-protocol';
 
 describe('Multi-Step Provenance Tokens E2E', () => {

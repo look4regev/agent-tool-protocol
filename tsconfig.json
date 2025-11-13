@@ -27,7 +27,7 @@
 			"@mondaydotcomorg/atp-langchain": ["packages/langchain/src/index.ts"],
 			"@mondaydotcomorg/atp-mcp-adapter": ["packages/mcp-adapter/src/index.ts"],
 			"@mondaydotcomorg/atp-protocol": ["packages/protocol/src/index.ts"],
-			"@agent-tool-protocol/provenance": ["packages/provenance/src/index.ts"],
+			"@mondaydotcomorg/atp-provenance": ["packages/provenance/src/index.ts"],
 			"@agent-tool-protocol/providers": ["packages/providers/src/index.ts"],
 			"@agent-tool-protocol/runtime": ["packages/runtime/src/index.ts"],
 			"@agent-tool-protocol/server": ["packages/server/src/index.ts"]

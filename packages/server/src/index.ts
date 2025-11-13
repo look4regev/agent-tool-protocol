@@ -24,7 +24,7 @@ export type {
 	PolicyAction,
 	PolicyResult,
 	SecurityPolicy,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 
 export {
 	ProvenanceMode,
@@ -57,4 +57,4 @@ export {
 	createCustomPolicy,
 	instrumentCode,
 	createTrackingRuntime,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';

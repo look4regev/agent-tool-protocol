@@ -33,7 +33,7 @@ import {
 	SecurityPolicyEngine,
 	ProvenanceSource,
 	registerProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import { ReaderPermissions } from '@agent-tool-protocol/server';
 import { getHintMap, reattachProvenanceFromHints } from '../utils/provenance-reattachment.js';
 import { createASTProvenanceChecker } from './ast-provenance-bridge.js';

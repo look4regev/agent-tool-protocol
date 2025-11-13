@@ -9,7 +9,7 @@ import {
 	captureProvenanceSnapshot,
 	verifyProvenanceHints,
 	type ProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import { emitProvenanceTokens } from '../utils/token-emitter.js';
 import { storeHintMap, clearHintMap } from '../utils/provenance-reattachment.js';
 import { log } from '@agent-tool-protocol/runtime';

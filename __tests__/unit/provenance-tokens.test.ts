@@ -14,7 +14,7 @@ import {
 	ProvenanceSource,
 	type TokenPayload,
 	type ProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 import { MemoryCache } from '@agent-tool-protocol/providers';
 
 describe('Provenance Token System - Unit Tests', () => {

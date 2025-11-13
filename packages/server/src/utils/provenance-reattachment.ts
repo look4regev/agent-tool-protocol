@@ -10,7 +10,7 @@ import {
 	markPrimitiveTainted,
 	computeDigest,
 	type ProvenanceMetadata,
-} from '@agent-tool-protocol/provenance';
+} from '@mondaydotcomorg/atp-provenance';
 
 /**
  * Global registry of hint maps per execution
