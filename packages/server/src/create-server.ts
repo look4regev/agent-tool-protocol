@@ -10,6 +10,7 @@ import type {
 import { ProvenanceMode } from '@mondaydotcomorg/atp-protocol';
 import { log, initializeLogger } from '@mondaydotcomorg/atp-runtime';
 import { shutdownLogger } from '@mondaydotcomorg/atp-runtime';
+import type { RuntimeAPIName } from '@mondaydotcomorg/atp-runtime';
 import type {
 	ServerConfig,
 	Middleware,
@@ -38,6 +39,7 @@ import {
 	MemoryCache,
 	OpenTelemetryAuditSink,
 } from '@mondaydotcomorg/atp-providers';
+import { APIAggregator } from './aggregator/index.js';
 
 export class AgentToolProtocolServer {
 	private config: ResolvedServerConfig;
@@ -396,6 +398,34 @@ export class AgentToolProtocolServer {
 		}
 
 		return definitions;
+	}
+
+	async getRuntimeDefinitions(ctx?: RequestContext): Promise<string> {
+		const aggregator = new APIAggregator(this.apiGroups);
+		
+		let requestedApis: RuntimeAPIName[] | undefined;
+		if (ctx?.query?.apis) {
+			requestedApis = ctx.query.apis
+				.split(',')
+				.map((s) => s.trim())
+				.filter(Boolean) as RuntimeAPIName[];
+		}
+		
+		let clientServices: { hasLLM: boolean; hasApproval: boolean; hasEmbedding: boolean; hasTools: boolean } | undefined;
+		
+		if (ctx?.clientId && this.sessionManager) {
+			try {
+				const session = await this.sessionManager.getSession(ctx.clientId);
+				if (session?.services) {
+					clientServices = session.services;
+				}
+			} catch (error) {}
+		}
+		
+		return aggregator.generateRuntimeTypes({
+			clientServices,
+			requestedApis,
+		});
 	}
 
 	async handleInit(ctx: RequestContext): Promise<unknown> {

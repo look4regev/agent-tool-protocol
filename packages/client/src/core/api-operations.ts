@@ -1,4 +1,9 @@
-import type { SearchOptions, SearchResult, ExploreResult } from '@mondaydotcomorg/atp-protocol';
+import type {
+	SearchOptions,
+	SearchResult,
+	ExploreResult,
+} from '@mondaydotcomorg/atp-protocol';
+import type { RuntimeAPIName } from '@mondaydotcomorg/atp-runtime';
 import type { ClientSession } from './session.js';
 
 export class APIOperations {
@@ -126,5 +131,38 @@ export class APIOperations {
 			version: string;
 			capabilities: Record<string, boolean>;
 		};
+	}
+
+	/**
+	 * Gets ATP runtime API definitions as TypeScript declarations.
+	 * Returns the full TypeScript definitions for atp.llm.*, atp.cache.*, etc.
+	 * These are the APIs available during code execution.
+	 * 
+	 * Behavior:
+	 * - No options: Returns APIs based on client capabilities (default filtering)
+	 * - apis: ['llm', 'cache']: Returns only specified APIs (intersection with client capabilities)
+	 * - apis: []: Returns all APIs regardless of client capabilities
+	 * 
+	 * @param options - Optional filtering options
+	 * @param options.apis - Specific APIs to include (e.g., ['llm', 'cache', 'approval'])
+	 */
+	async getRuntimeDefinitions(options?: { apis?: RuntimeAPIName[] }): Promise<string> {
+		await this.session.ensureInitialized();
+
+		const params = new URLSearchParams();
+		if (options?.apis && options.apis.length > 0) {
+			params.set('apis', options.apis.join(','));
+		}
+
+		const url = `${this.session.getBaseUrl()}/api/runtime${params.toString() ? `?${params}` : ''}`;
+		const headers = await this.session.prepareHeaders('GET', url);
+
+		const response = await fetch(url, { headers });
+
+		if (!response.ok) {
+			throw new Error(`Failed to get runtime definitions: ${response.status}`);
+		}
+
+		return await response.text();
 	}
 }
