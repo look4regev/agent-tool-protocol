@@ -19,6 +19,11 @@
 		},
 		"dev": {
 			"cache": false
+		},
+		"nx-release-publish": {
+			"dependsOn": [
+				"build"
+			]
 		}
 	},
 	"namedInputs": {
@@ -31,11 +36,32 @@
 		],
 		"sharedGlobals": ["{workspaceRoot}/tsconfig.json"]
 	},
+	"release": {
+		"projects": ["packages/*"],
+		"projectsRelationship": "independent",
+		"version": {
+			"conventionalCommits": true
+		}
+	},
 	"plugins": [
 		{
 			"plugin": "@nx/js",
 			"options": {
 				"analyzeSourceFiles": true
+			}
+		},
+		{
+			"plugin": "@nx/js/typescript",
+			"options": {
+				"typecheck": {
+					"targetName": "typecheck"
+				},
+				"build": {
+					"targetName": "build",
+					"configName": "tsconfig.lib.json",
+					"buildDepsName": "build-deps",
+					"watchDepsName": "watch-deps"
+				}
 			}
 		}
 	],
