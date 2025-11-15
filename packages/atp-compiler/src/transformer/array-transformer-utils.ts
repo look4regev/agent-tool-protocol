@@ -1,11 +1,10 @@
 import * as t from '@babel/types';
+import { isArrayMethod } from './utils.js';
 
 /**
- * Find LLM call expression in callback body
+ * Find LLM call expression in AST node
  */
-export function findLLMCallExpression(
-	body: t.BlockStatement | t.Expression
-): t.CallExpression | null {
+export function findLLMCallExpression(body: t.Node): t.CallExpression | null {
 	let found: t.CallExpression | null = null;
 
 	const visit = (node: t.Node) => {
@@ -42,9 +41,6 @@ export function findLLMCallExpression(
  */
 export function getArrayMethodName(node: t.CallExpression): string | null {
 	const arrayMethods = ['map', 'forEach', 'filter', 'reduce', 'find', 'some', 'every', 'flatMap'];
-
-	const { isArrayMethod } = require('./utils.js');
-
 	for (const method of arrayMethods) {
 		if (isArrayMethod(node, method)) {
 			return method;
