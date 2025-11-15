@@ -2,35 +2,120 @@
 
 A production-ready, code-first protocol for AI agents to interact with external systems through secure sandboxed code execution.
 
-## 🌟 Key Features
+## What is Agent Tool Protocol?
 
-- **Code-First Approach**: LLMs generate TypeScript/JavaScript code instead of JSON function calls
-- **Production Security**: Isolated VM sandboxing with memory limits, timeouts, and provenance tracking
-- **OpenAPI Native**: Convert any OpenAPI spec to executable functions automatically
-- **MCP Compatible**: Connect to multiple MCP servers and aggregate their tools
-- **Semantic Search**: Intelligent API discovery with optional embedding-based search
-- **LLM Callbacks**: Client-side LLM execution with pause/resume support
-- **Approval Workflows**: Human-in-the-loop via LangGraph interrupts and checkpoints
-- **Type Safety**: Full TypeScript support with generated type definitions
-- **Runtime APIs**: Built-in `atp.*` APIs for LLM, embeddings, approvals, caching, logging
-- **Easy Integration**: Works with LangChain, LangGraph, and existing MCP infrastructure
+Agent Tool Protocol (ATP) is a next-generation protocol that enables AI agents to interact with external systems by generating and executing TypeScript/JavaScript code in a secure, sandboxed environment. Unlike traditional function-calling protocols, ATP allows LLMs to write code that can execute multiple operations in parallel, filter and transform data, chain operations together, and use familiar programming patterns.
 
-## 🚀 Why Code-First?
+ATP provides a complete ecosystem for building production-ready AI agents with:
+- **Secure code execution** in isolated V8 VMs with memory limits and timeouts
+- **Runtime SDK** (`atp.*`) for LLM calls, embeddings, approvals, caching, and logging
+- **Stateless architecture** with optional caching for scalability
+- **Client tools** for seamless integration with LangChain, LangGraph, and other frameworks
+- **Provenance tracking** to defend against prompt injection attacks
+- **OpenAPI and MCP compatibility** for connecting to any API or MCP server
 
-Traditional function-calling protocols like MCP have limitations:
+## Why ATP vs MCP?
 
-- **Context Bloat**: Large schemas consume tokens
-- **Sequential Execution**: Only one tool at a time
-- **No Filtering**: Can't process or combine results
-- **Limited Models**: Not all LLMs support function calling well
+Traditional function-calling protocols like Model Context Protocol (MCP) have fundamental limitations:
 
-**Agent Tool Protocol solves this** by letting LLMs write code that:
+### MCP Limitations
 
-- ✅ Executes multiple operations in parallel
-- ✅ Filters and transforms data
-- ✅ Chains operations together
-- ✅ Uses familiar programming patterns
-- ✅ Works with any LLM that can generate code
+- **Context Bloat**: Large schemas consume significant tokens in every request
+- **Sequential Execution**: Only one tool can be called at a time
+- **No Data Processing**: Can't filter, transform, or combine results within the protocol
+- **Limited Model Support**: Not all LLMs support function calling well
+- **Schema Overhead**: Complex nested schemas are verbose and token-expensive
+
+### ATP Advantages
+
+- ✅ **OpenAPI Integration**: Built in open api integration allowing to connect a single server to multiple mcps & openapis 
+- ✅ **Parallel Execution**: Execute multiple operations simultaneously
+- ✅ **Data Processing**: Filter, map, reduce, and transform data inline
+- ✅ **Code Flexibility**: Use familiar programming patterns (loops, conditionals, async/await)
+- ✅ **Universal Compatibility**: Works with any LLM that can generate code
+- ✅ **Reduced Token Usage**: Code is more concise than verbose JSON schemas
+- ✅ **Type Safety**: Full TypeScript support with generated type definitions
+- ✅ **Production Ready**: Built-in security, caching, state management, and observability
+
+**ATP solves these problems** by letting LLMs write code that executes in a secure sandbox, giving agents the full power of a programming language while maintaining strict security boundaries.
+
+## Architecture & Capabilities
+
+### High Level Architecture
+
+```mermaid
+graph TB
+    LLM[LLM/Agent] --> Client[ATP Client]
+    Client --> Server[ATP Server]
+
+    Server --> Validator[Code Validator<br/>AST Analysis]
+    Server --> Executor[Sandbox Executor<br/>Isolated VM]
+    Server --> Aggregator[API Aggregator<br/>OpenAPI/MCP/Custom]
+    Server --> Search[Search Engine<br/>Semantic/Keyword]
+    Server --> State[State Manager<br/>Pause/Resume]
+
+    Executor --> Runtime[Runtime APIs]
+    Runtime --> LLMAPI[atp.llm.*]
+    Runtime --> EmbedAPI[atp.embedding.*]
+    Runtime --> ApprovalAPI[atp.approval.*]
+    Runtime --> CacheAPI[atp.cache.*]
+    Runtime --> LogAPI[atp.log.*]
+
+    LLMAPI -.Pause.-> Client
+    EmbedAPI -.Pause.-> Client
+    ApprovalAPI -.Pause.-> Client
+
+    Aggregator --> OpenAPI[OpenAPI Loader]
+    Aggregator --> MCP[MCP Connector]
+    Aggregator --> Custom[Custom Functions]
+```
+
+### Runtime SDK (`atp.*`)
+
+Agents executing code have access to a powerful runtime SDK that provides:
+
+- **`atp.llm.*`**: Client-side LLM execution with call, extract, and classify methods
+- **`atp.embedding.*`**: Semantic search with embedding storage and similarity search
+- **`atp.approval.*`**: Human-in-the-loop approvals with pause/resume support
+- **`atp.cache.*`**: Key-value caching with TTL support
+- **`atp.log.*`**: Structured logging for debugging and observability
+- **`atp.progress.*`**: Progress reporting for long-running operations
+- **`atp.api.*`**: Dynamic APIs from OpenAPI specs, MCP servers, or custom functions
+
+The runtime SDK enables agents to perform complex workflows that require LLM reasoning, data persistence, human approval, and more—all within the secure sandbox.
+
+### Stateless Architecture with Caching
+
+ATP is designed as a stateless system for horizontal scalability:
+
+- **Stateless Server**: Can work completely stateless with distribute caching like redis
+- **Execution State**: Long-running executions can pause and resume via state management
+- **State TTL**: Configurable time-to-live for execution state
+
+This architecture allows ATP servers to scale horizontally while maintaining execution continuity for complex workflows.
+
+### Client Execution
+
+ATP provides the ability to execute code in the client side:
+
+
+- **LLM Callbacks**: Client-side LLM execution with automatic pause/resume
+- **Approval Workflows**: Approvals for human-in-the-loop
+- **Client tools**: Support executing tools defined in the client side
+- **Embedding Capabilities**: Execute embedding request using the client embedding model
+
+
+### Provenance Security
+
+ATP includes advanced security features to defend against prompt injection and data exfiltration:
+
+- **Provenance Tracking**: Tracks the origin of all data (user, LLM, API, etc.)
+- **Security Policies**: Configurable policies like `preventDataExfiltration` and `requireUserOrigin`
+- **AST Analysis**: Code validation to detect forbidden patterns
+- **Proxy Mode**: Runtime interception of all external calls
+- **Audit Logging**: Complete audit trail of all executions
+
+Provenance security is inspired by Google Research's CAMEL paper and provides defense-in-depth against adversarial inputs.
 
 ## 📦 Installation
 
@@ -40,8 +125,16 @@ yarn add @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
 
 # Using npm
 npm install @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
+
+# Using pnpm
+pnpm add @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
+
+# Using bun
+bun add @mondaydotcomorg/atp-server @mondaydotcomorg/atp-client
 ```
+
 > **📝 Note:** The `--no-node-snapshot` flag is required for Node.js 20+
+
 ## 🎯 Quick Start
 
 ### Quickstart Example
@@ -113,7 +206,6 @@ cd examples/quickstart
 NODE_OPTIONS='--no-node-snapshot' npm start
 ```
 
-
 ### LangChain Agent Example
 
 Use ATP with LangChain/LangGraph for autonomous agents:
@@ -123,7 +215,6 @@ import { createServer, loadOpenAPI } from '@mondaydotcomorg/atp-server';
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
 import { createATPTools } from '@mondaydotcomorg/atp-langchain';
-
 
 async function main() {
 	// Start ATP server with OpenAPI
@@ -222,111 +313,19 @@ const { tools } = await createATPTools({
 });
 ```
 
-## 📚 Runtime APIs (atp.\*)
+## 📚 Runtime APIs Overview
 
-Agents executing code have access to powerful runtime APIs:
+The `atp.*` runtime SDK provides a comprehensive set of APIs for agents executing code:
 
-### atp.llm.\*
+- **`atp.llm.*`**: Client-side LLM execution for reasoning, extraction, and classification (requires `client.provideLLM()`)
+- **`atp.embedding.*`**: Semantic search with embedding storage and similarity search (requires `client.provideEmbedding()`)
+- **`atp.approval.*`**: Human-in-the-loop approvals with pause/resume support (requires `client.provideApproval()`)
+- **`atp.cache.*`**: Key-value caching with TTL for performance optimization
+- **`atp.log.*`**: Structured logging for debugging and observability
+- **`atp.progress.*`**: Progress reporting for long-running operations
+- **`atp.api.*`**: Dynamic APIs from OpenAPI specs, MCP servers, or custom functions
 
-Client-side LLM execution (requires `client.provideLLM()`):
-
-```typescript
-// Simple LLM call
-const response = await atp.llm.call({
-	prompt: 'What is the capital of France?',
-	temperature: 0.7,
-});
-
-// Extract structured data
-const user = await atp.llm.extract({
-	prompt: 'Extract: John Doe, john@example.com',
-	schema: {
-		type: 'object',
-		properties: {
-			name: { type: 'string' },
-			email: { type: 'string' },
-		},
-	},
-});
-
-// Classify text
-const category = await atp.llm.classify({
-	text: 'This is amazing!',
-	categories: ['positive', 'negative', 'neutral'],
-});
-```
-
-### atp.embedding.\*
-
-Semantic search with embeddings (requires `client.provideEmbedding()`):
-
-```typescript
-// Store embedding
-const id = await atp.embedding.embed('Important document');
-
-// Search by similarity
-const results = await atp.embedding.search('similar documents', {
-	topK: 5,
-	minSimilarity: 0.7,
-});
-```
-
-### atp.approval.\*
-
-Human-in-the-loop approvals (requires `client.provideApproval()`):
-
-```typescript
-const result = await atp.approval.request('Delete all user data?', { critical: true });
-
-if (result.approved) {
-	await deleteData();
-}
-```
-
-### atp.cache.\*
-
-Caching with TTL:
-
-```typescript
-await atp.cache.set('key', value, 3600); // TTL in seconds
-const cached = await atp.cache.get('key');
-```
-
-### atp.log.\*
-
-Structured logging:
-
-```typescript
-atp.log.info('User logged in', { userId: '123' });
-atp.log.error('Failed to connect', { error });
-```
-
-### atp.progress.\*
-
-Progress reporting:
-
-```typescript
-atp.progress.report({
-	current: 5,
-	total: 10,
-	message: 'Processing items...',
-});
-```
-
-### atp.api.\*
-
-Dynamic APIs from OpenAPI, MCP, or custom functions:
-
-```typescript
-// OpenAPI
-await atp.api.github.repos.get({ owner: 'user', repo: 'repo' });
-
-// MCP
-await atp.api.filesystem.read_file({ path: 'README.md' });
-
-// Custom
-await atp.api.database.createUser({ name: 'Alice' });
-```
+All runtime APIs are available within the secure sandbox and automatically handle pause/resume for operations that require client-side interaction (LLM, embeddings, approvals).
 
 ## 🛡️ Security Features
 
@@ -364,76 +363,14 @@ const server = createServer({
 - **API Key Authentication**: Optional API key requirement
 - **Audit Logging**: All executions logged for compliance
 
-## 📊 Architecture
-
-```mermaid
-graph TB
-    LLM[LLM/Agent] --> Client[ATP Client]
-    Client --> Server[ATP Server]
-
-    Server --> Validator[Code Validator<br/>AST Analysis]
-    Server --> Executor[Sandbox Executor<br/>Isolated VM]
-    Server --> Aggregator[API Aggregator<br/>OpenAPI/MCP/Custom]
-    Server --> Search[Search Engine<br/>Semantic/Keyword]
-    Server --> State[State Manager<br/>Pause/Resume]
-
-    Executor --> Runtime[Runtime APIs]
-    Runtime --> LLMAPI[atp.llm.*]
-    Runtime --> EmbedAPI[atp.embedding.*]
-    Runtime --> ApprovalAPI[atp.approval.*]
-    Runtime --> CacheAPI[atp.cache.*]
-    Runtime --> LogAPI[atp.log.*]
-
-    LLMAPI -.Pause.-> Client
-    EmbedAPI -.Pause.-> Client
-    ApprovalAPI -.Pause.-> Client
-
-    Aggregator --> OpenAPI[OpenAPI Loader]
-    Aggregator --> MCP[MCP Connector]
-    Aggregator --> Custom[Custom Functions]
-```
-
-## 🏗️ Packages
-
-```
-@agent-tool-protocol/
-├── protocol          # Core types and interfaces
-├── server            # ATP server implementation
-├── client            # Client SDK
-├── runtime           # Runtime APIs (atp.*)
-├── mcp-adapter       # MCP integration
-├── langchain         # LangChain/LangGraph integration
-├── atp-compiler      # Loop transformation and optimization
-├── providers         # Cache, auth, OAuth, audit providers
-└── provenance        # Provenance security (CAMEL-inspired)
-```
-
 ## 🔍 API Discovery
 
-### Search APIs
+ATP provides intelligent API discovery to help agents find the right tools:
 
-```typescript
-const client = new AgentToolProtocolClient({ baseUrl, headers });
-
-// Semantic search (requires embeddings)
-const results = await client.searchQuery('How do I create a user?');
-
-// Keyword search
-const results = await client.search({
-	query: 'create user',
-	limit: 10,
-});
-
-// Explore all APIs
-const schema = await client.explore();
-```
-
-### Type Definitions
-
-```typescript
-const types = await client.getTypeDefinitions();
-// Returns TypeScript definitions for all atp.* APIs
-```
+- **Semantic Search**: Embedding-based search for natural language queries (requires embeddings)
+- **Keyword Search**: Fast keyword-based search across API names and descriptions
+- **Type Definitions**: Generated TypeScript definitions for all available APIs
+- **Schema Exploration**: Full API schema exploration via `client.explore()`
 
 ## ⚙️ Configuration
 
@@ -545,6 +482,21 @@ server.addAPIGroup({
 });
 ```
 
+## 🏗️ Packages
+
+```
+@agent-tool-protocol/
+├── protocol          # Core types and interfaces
+├── server            # ATP server implementation
+├── client            # Client SDK
+├── runtime           # Runtime APIs (atp.*)
+├── mcp-adapter       # MCP integration
+├── langchain         # LangChain/LangGraph integration
+├── atp-compiler      # Loop transformation and optimization
+├── providers         # Cache, auth, OAuth, audit providers
+└── provenance        # Provenance security (CAMEL-inspired)
+```
+
 ## 📚 Documentation
 
 - **[Getting Started](./docs/getting-started.md)** - Comprehensive guide
@@ -638,7 +590,7 @@ yarn lint
 
 ### Node.js Version
 
-
+Node.js 18+ is required. Node.js 20+ requires the `--no-node-snapshot` flag.
 
 ### Compiler Setup (for isolated-vm)
 
@@ -663,7 +615,7 @@ This project is licensed under the MIT License - see the [License](./LICENSE) fi
 
 - **Documentation**: [docs/](https://agenttoolprotocol.com/docs)
 - **Examples**: [examples/](./examples/)
-- **Package READMEs**: [packages/](./packages/)
+- **Packages**: [packages/](./packages/)
 
 ---
 
