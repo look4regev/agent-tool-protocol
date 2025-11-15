@@ -497,15 +497,6 @@ server.addAPIGroup({
 └── provenance        # Provenance security (CAMEL-inspired)
 ```
 
-## 📚 Documentation
-
-- **[Getting Started](./docs/getting-started.md)** - Comprehensive guide
-- **[Protocol Specification](./docs/protocol-spec.md)** - Complete protocol design
-- **[API Reference](./docs/api-reference.md)** - Detailed API documentation
-- **[Security Guide](./docs/provenance-security-guide.md)** - Security best practices
-- **[LangChain Integration](./docs/framework-integration.md)** - LangChain/LangGraph guide
-- **[Examples](./examples/)** - Working examples
-
 ## 🧪 Examples
 
 All examples are self-contained and work end-to-end without external servers.
