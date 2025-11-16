@@ -3644,7 +3644,7 @@ __metadata:
   dependencies:
     "@modelcontextprotocol/sdk": "npm:^0.5.0"
     "@mondaydotcomorg/atp-protocol": "npm:0.18.2"
-    "@mondaydotcomorg/atp-server": "npm:0.18.2"
+    "@mondaydotcomorg/atp-server": "npm:0.18.3"
     typescript: "npm:^5.3.3"
     vitest: "npm:^1.2.1"
     zod: "npm:^4.1.11"
@@ -3705,7 +3705,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mondaydotcomorg/atp-server@npm:*, @mondaydotcomorg/atp-server@npm:0.18.2, @mondaydotcomorg/atp-server@workspace:*, @mondaydotcomorg/atp-server@workspace:packages/server":
+"@mondaydotcomorg/atp-server@npm:*, @mondaydotcomorg/atp-server@npm:0.18.3, @mondaydotcomorg/atp-server@workspace:*, @mondaydotcomorg/atp-server@workspace:packages/server":
   version: 0.0.0-use.local
   resolution: "@mondaydotcomorg/atp-server@workspace:packages/server"
   dependencies:
